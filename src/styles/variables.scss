@@ -48,6 +48,9 @@ $mob-min: 767;
   color: $color;
 }
 
+@mixin hex-to-rgb($color, $name) {
+  #{$name}: #{red($color)}, #{green($color)}, #{blue($color)};
+}
 
 @mixin r($width) {
   @media only screen and (max-width: $width+ "px") {

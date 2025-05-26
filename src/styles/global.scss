@@ -19,6 +19,17 @@ body {
   overflow-x: hidden;
 }
 
+.decor {
+  z-index: 0;
+  pointer-events: none;
+
+  & > * {
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+  }
+}
+
 .main {
   flex-grow: 1;
   overflow-x: clip;

@@ -1,8 +1,10 @@
 .container {
+  position: relative;
   width: 100%;
   max-width: 1220px;
   padding: 0 25px;
   margin: 0 auto;
+  z-index: 1;
 
   @include r($mobile) {
     max-width: 100%;

@@ -1,3 +1,127 @@
 .article-intro-card {
+  --card-color: #{$black};
+  @include hex-to-rgb($black, '--card-color-rgb');
 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 520px;
+  border-radius: $r-20;
+  overflow: hidden;
+  transition: .2s linear;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0 #00000040;
+  }
+
+  &--red {
+    --card-color: #{$red};
+    @include hex-to-rgb($red, '--card-color-rgb');
+  }
+
+  &--orange {
+    --card-color: #{$orange};
+    @include hex-to-rgb($orange, '--card-color-rgb');
+  }
+
+  &--purple {
+    --card-color: #{$purple};
+    @include hex-to-rgb($purple, '--card-color-rgb');
+  }
+
+  &--green {
+    --card-color: #{$green};
+    @include hex-to-rgb($green, '--card-color-rgb');
+  }
+
+  &--yellow {
+    --card-color: #{$yellow};
+    @include hex-to-rgb($yellow, '--card-color-rgb');
+  }
+
+  &--blue {
+    --card-color: #{$blue};
+    @include hex-to-rgb($blue, '--card-color-rgb');
+  }
+
+  &__tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    padding: 18px 14px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    @include text($white);
+    border-radius: 100px;
+    background: rgba(var(--card-color-rgb), .7);
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: $r-20;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 25px;
+
+    padding: 83px 30px 30px;
+    min-height: 206px;
+
+    background-color: var(--card-color);
+    background-image: url("../assets/images/decor-lines.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 54px, 100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 27px;
+    color: $white;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    @include text($white);
+  }
+
+  &__icon {
+    display: flex;
+    width: 7px;
+    height: 7px;
+    transform: rotate(-90deg);
+  }
 }
