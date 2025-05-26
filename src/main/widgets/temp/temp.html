@@ -1,0 +1,49 @@
+<style>
+    .temp {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-top: 1px solid lightgray;
+    }
+    
+    .temp__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 12px;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(100.82deg, #2196F3 15.04%, #1976D2 89.25%);
+        transition: .2s linear;
+    }
+    
+    .temp__link:hover {
+        opacity: 0.8;
+    }
+    
+    .temp__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .temp__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+</style>
+<div class="temp">
+    <div class="container">
+        <div class="temp__wrapper">
+            <p class="temp__text">Временная секция для навигации по вёрстке</p>
+            <div class="temp__list">
+                <a href="./index.html" class="temp__link">Главная</a>
+            </div>
+        </div>
+    </div>
+</div>

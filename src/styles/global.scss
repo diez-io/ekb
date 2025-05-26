@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 366px;
+  min-height: 100vh;
+
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+
+  background-color: $white;
+
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-x: clip;
+}
+
+svg {
+  display: flex;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($mobile + 1) {
+    display: none;
+  }
+}
+
+.desktop-min-hidden {
+  @include rmin($mob-min + 1) {
+    display: none;
+  }
+}
+
+.fixed {
+  overflow: hidden;
+
+  @include r($mobile) {
+    padding-right: 0 !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+[data-content] {
+  height: 0;
+  overflow: hidden;
+
+  &.active {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+*[disabled] {
+  pointer-events: none;
+  opacity: .5;
+}
+
+.text-visible {
+  -webkit-line-clamp: none;
+  line-clamp: none;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+
+  @include r($mobile) {
+    width: 100px;
+    height: 30px;
+  }
+}

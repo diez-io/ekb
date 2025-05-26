@@ -1,0 +1,16 @@
+.title {
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $black;
+
+  &--small {
+    font-size: 36px;
+  }
+
+  &--light {
+    color: $white;
+  }
+}

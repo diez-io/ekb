@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body>
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    Екатеринбург <br>
+                    город контрастов
+                </h1>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockCards %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

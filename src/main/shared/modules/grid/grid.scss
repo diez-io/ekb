@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 456px;
+  gap: 40px;
+
+  @include r($mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

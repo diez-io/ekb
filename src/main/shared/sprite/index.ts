@@ -1,0 +1,6 @@
+import "./icon-arrow-down.svg"
+import "./icon-arrow-right.svg"
+import "./icon-search.svg"
+import "./icon-date.svg"
+import "./icon-eye.svg"
+import "./icon-location.svg"

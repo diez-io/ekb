@@ -1,0 +1,86 @@
+.editor {
+  li, a, p, span {
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+
+    @include r($mobile) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    a {
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 25px;
+
+    li {
+    }
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: decimal;
+    padding-left: 25px;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: $black;
+
+    @include r($mobile) {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    a {
+      font: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &--text {
+    li, a, p, span {
+      color: $black;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-bold {
+      li, a, p, span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+
+        color: $black;
+
+        @include r($mobile) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

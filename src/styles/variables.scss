@@ -1,0 +1,205 @@
+@use "sass:math";
+
+// Шрифты
+$font-main: "Iset Sans", sans-serif;
+
+// Цвета
+$black: #202020;
+$white: #FFFFFF;
+$grey: #B6B6B6;
+$red: #E4342E;
+$orange: #FD6524;
+$orange-light: #F39314;
+$yellow: #EFBE00;
+$green: #1AB31E;
+$green-accent: #00B400;
+$blue: #1AA1E0;
+$purple: #9F5AA7;
+
+:root {
+  .theme-black {
+    $black: #202020;
+    $white: #FFFFFF;
+    $grey: #B6B6B6;
+    $red: #E4342E;
+    $orange: #FD6524;
+    $orange-light: #F39314;
+    $yellow: #EFBE00;
+    $green: #1AB31E;
+    $green-accent: #00B400;
+    $blue: #1AA1E0;
+    $purple: #9F5AA7;
+  }
+}
+
+$r-30: 30px;
+$r-20: 20px;
+
+$mobile: 1199;
+$mob-min: 767;
+
+// Миксины
+@mixin text($color: $black, $size: 14px, $weight: 400, $textTransform: uppercase) {
+  font-family: $font-main;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 100%;
+  text-transform: $textTransform;
+  color: $color;
+}
+
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content
+  }
+}
+
+@mixin hov() {
+  @media (hover: hover) and (pointer: fine) {
+    @content
+  }
+}
+
+@mixin cover() {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin coverFull() {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin calc-width($element-width, $container-width) {
+  $percent: calc(($element-width / $container-width) * 100);
+  width: #{$percent}#{'%'};
+}
+
+@mixin calc-max-width($element-width, $container-width) {
+  $percent: calc(($element-width / $container-width) * 100);
+  max-width: #{$percent}#{'%'};
+}
+
+// Генераторы
+@mixin order($num) {
+  order: $num;
+}
+
+@for $i from 1 through 200 {
+  .order-#{$i} {
+    @include order($i);
+  }
+}
+
+@mixin order-mob($num) {
+  @include r($mobile) {
+    order: $num;
+  }
+}
+
+@for $i from 1 through 200 {
+  .order-mob-#{$i} {
+    @include order-mob($i);
+  }
+}
+
+@mixin pt($size) {
+  padding-top: math.div($size, 16) * 1rem;
+}
+
+@for $i from 1 through 200 {
+  .pt-#{$i} {
+    @include pt($i);
+  }
+}
+
+@mixin ptm($size) {
+  @include r($mobile) {
+    padding-top: math.div($size, 16) * 1rem;
+  }
+}
+
+@for $i from 0 through 200 {
+  .ptm-#{$i} {
+    @include ptm($i);
+  }
+}
+
+@mixin pb($size) {
+  padding-bottom: math.div($size, 16) * 1rem;
+}
+
+@for $i from 1 through 200 {
+  .pb-#{$i} {
+    @include pb($i);
+  }
+}
+
+@mixin pbm($size) {
+  @include r($mobile) {
+    padding-bottom: math.div($size, 16) * 1rem;
+  }
+}
+
+@for $i from 0 through 200 {
+  .pbm-#{$i} {
+    @include pbm($i);
+  }
+}
+
+@mixin mt($size) {
+  margin-top: math.div($size, 16) * 1rem;
+}
+
+@for $i from 1 through 200 {
+  .mt-#{$i} {
+    @include mt($i);
+  }
+}
+
+@mixin mtm($size) {
+  @include r($mobile) {
+    margin-top: math.div($size, 16) * 1rem;
+  }
+}
+
+@for $i from 0 through 200 {
+  .mtm-#{$i} {
+    @include mtm($i);
+  }
+}
+
+@mixin mb($size) {
+  margin-bottom: math.div($size, 16) * 1rem;
+}
+
+@for $i from 1 through 200 {
+  .mb-#{$i} {
+    @include mb($i);
+  }
+}
+
+@mixin mbm($size) {
+  @include r($mobile) {
+    margin-bottom: math.div($size, 16) * 1rem;
+  }
+}
+
+@for $i from 0 through 200 {
+  .mbm-#{$i} {
+    @include mbm($i);
+  }
+}

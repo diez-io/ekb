@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Екатеринбург</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link href="css/main.css" rel="stylesheet"></head>
+
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="/" class="logo">
+                <img src="./assets/images/logo.svg" alt="logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <span>О Екатеринбурге и городах спутниках</span>
+                            <svg class="nav__icon">
+                                <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                        <ul class="nav__submenu">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <span>Город развивается</span>
+                            <svg class="nav__icon">
+                                <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                        <ul class="nav__submenu">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <span>Гостям</span>
+                            <svg class="nav__icon">
+                                <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                            </svg>
+                        </a>
+                        <ul class="nav__submenu">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Спецпроекты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Справка</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-control">
+                <div class="header-control__button">
+                    <svg class="icon">
+                        <use xlink:href="./assets/sprite.svg#icon-search"></use>
+                    </svg>
+                </div>
+                <div class="header-control__button">
+                    <svg class="icon">
+                        <use xlink:href="./assets/sprite.svg#icon-eye"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg.jpg')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    Екатеринбург <br>
+                    город контрастов
+                </h1>
+                <a href="#" class="button">Подробнее</a>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-130 pb-130">
+    <div class="container">
+        <div class="header-block">
+            <h2 class="title">
+                <span>Гостям города</span>
+            </h2>
+            <button class="button">
+                <span>Виды туризма</span>
+                <span class="button__icon">
+                        <svg>
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                    </span>
+            </button>
+        </div>
+        <div class="intro-cards">
+            <article class="article-intro-card">
+            
+            </article>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+        </div>
+    </div>
+</footer>
+
+<div class="hidden">
+</div>
+
+<style>
+    .temp {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-top: 1px solid lightgray;
+    }
+    
+    .temp__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 12px;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(100.82deg, #2196F3 15.04%, #1976D2 89.25%);
+        transition: .2s linear;
+    }
+    
+    .temp__link:hover {
+        opacity: 0.8;
+    }
+    
+    .temp__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .temp__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+</style>
+<div class="temp">
+    <div class="container">
+        <div class="temp__wrapper">
+            <p class="temp__text">Временная секция для навигации по вёрстке</p>
+            <div class="temp__list">
+                <a href="./index.html" class="temp__link">Главная</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer src="bundle.js"></script></body>
+</html>
