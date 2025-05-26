@@ -1,13 +1,6 @@
 import Slider from "./slider";
 import {Fancybox} from "@fancyapps/ui";
 import Mask from "./mask";
-import MobileMenu from "./mobile-menu";
-import Tabs from "./tabs";
-import Video from "./video";
-import Form from "./form";
-import Overflow from "./overflow";
-import Menu from "./menu";
-import Filter from "./filter";
 
 class App {
     constructor() {
@@ -15,16 +8,34 @@ class App {
     }
     
     init = () => {
+        this.createWindowScroll()
         this.createSlider()
         this.createFancybox()
         this.createMask()
-        this.createMobileMenu()
-        this.createShowMore()
-        this.createTabs()
-        this.createForm()
-        this.createOverflow()
-        this.createMenu()
-        this.createFilter()
+    }
+    
+    createWindowScroll = () => {
+        const header = document.querySelector('.header');
+        const logos = header.querySelectorAll('.logo img');
+        
+        const checkPosition = () => {
+            if (window.scrollY >= 200) {
+                header.classList.add('invert')
+                logos[0].setAttribute('hidden', '');
+                logos[1].removeAttribute('hidden');
+            } else {
+                header.classList.remove('invert')
+                logos[0].removeAttribute('hidden');
+                logos[1].setAttribute('hidden', '');
+            }
+        }
+        
+        checkPosition()
+        
+        window.addEventListener('scroll', () => {
+            if (!header) return;
+            checkPosition()
+        })
     }
     
     createSlider = () => {
@@ -53,85 +64,6 @@ class App {
     
     createMask = () => {
         new Mask();
-    }
-    
-    createMobileMenu = () => {
-        new MobileMenu()
-    }
-    
-    createShowMore = () => {
-        const showMoreBtn = document.querySelectorAll('[data-show-more]');
-        if (!showMoreBtn) return
-        
-        showMoreBtn.forEach(el => {
-            const textElement = el.querySelector('span')
-            const innerText = textElement.textContent.trim();
-            
-            el.addEventListener('click', (evt) => {
-                evt.preventDefault()
-                const content = el.parentElement.querySelector('[data-content]');
-                const textContent = el.parentElement.querySelector('[data-text-content]')
-                if (content) {
-                    content.classList.toggle('active')
-                    if (content.classList.contains('active')) {
-                        textElement.textContent = 'Свернуть'
-                        el.classList.add('active')
-                    } else {
-                        textElement.textContent = innerText
-                        el.classList.remove('active')
-                    }
-                }
-                if (textContent) {
-                    textContent.classList.toggle('text-visible')
-                    if (textContent.classList.contains('text-visible')) {
-                        textElement.textContent = 'Свернуть'
-                        el.classList.add('active')
-                    } else {
-                        textElement.textContent = innerText
-                        el.classList.remove('active')
-                    }
-                }
-            })
-        })
-    }
-    
-    createTabs = () => {
-        const tabs = document.querySelectorAll('[data-tabs]');
-        if (!tabs) return
-        
-        tabs.forEach(tab => {
-            new Tabs(tab)
-        })
-    }
-    
-    createForm = () => {
-        const forms = document.querySelectorAll('.form');
-        if (!forms) return
-        forms.forEach(form => {
-            new Form(form)
-        })
-    }
-    
-    createOverflow = () => {
-        const overflowElements = document.querySelectorAll('[data-overflow]');
-        if (!overflowElements) return
-        overflowElements.forEach(overflowElement => {
-            new Overflow(overflowElement)
-        })
-    }
-    
-    createMenu = () => {
-        const menu = document.querySelector('[data-menu]');
-        if (!menu) return
-        new Menu(menu)
-    }
-    
-    createFilter = () => {
-        const filters = document.querySelectorAll('[data-filter]');
-        if (!filters) return
-        filters.forEach(filter => {
-            new Filter(filter)
-        })
     }
 }
 

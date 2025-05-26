@@ -1,0 +1,3 @@
+.text {
+  @include text($black, 16px, 300, none, 22px);
+}

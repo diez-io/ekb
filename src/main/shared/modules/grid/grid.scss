@@ -1,12 +1,12 @@
 .grid {
   display: grid;
   grid-auto-flow: dense;
-  grid-template-columns: 1fr 456px;
-  gap: 40px;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
 
-  @include r($mobile) {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  @for $i from 1 through 12 {
+    .grid__item--#{$i} {
+      grid-column: span $i;
+    }
   }
 }

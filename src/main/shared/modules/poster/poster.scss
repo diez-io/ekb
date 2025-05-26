@@ -1,0 +1,13 @@
+.poster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 87px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}

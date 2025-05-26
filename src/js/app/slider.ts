@@ -40,17 +40,11 @@ class Slider {
         case 'default':
             this.initDefaultSlider();
             break;
-        case 'cards':
-            this.initCardsSlider();
+        case 'poster':
+            this.initPosterSlider();
             break;
         case 'thumbs':
             this.initThumbsSlider();
-            break;
-        case 'carousel':
-            this.initCarouselSlider();
-            break;
-        case 'auto':
-            this.initAutoSlider();
             break;
         }
     }
@@ -117,30 +111,17 @@ class Slider {
         })
     }
     
-    initCardsSlider() {
+    initPosterSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
-            modules: [Navigation, Pagination],
-            slidesPerView: this.isAuto ? 'auto' : 1,
-            spaceBetween: 10,
+            modules: [Navigation],
+            slidesPerView: 'auto',
+            spaceBetween: 30,
             watchSlidesProgress: true,
             navigation: {
                 prevEl: this.buttonPrev,
                 nextEl: this.buttonNext,
                 disabledClass: 'slider__btn--disabled'
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            breakpoints: {
-                1200: {
-                    slidesPerView: this.slidesCount ? this.slidesCount : 4,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: this.isAuto ? 'auto' : 2,
-                    spaceBetween: 20,
-                }
             },
         })
     }
@@ -173,47 +154,6 @@ class Slider {
             thumbs: {
                 swiper: thumbSlider,
             },
-        })
-    }
-    
-    initCarouselSlider() {
-        const slider = this.el.querySelector('.swiper');
-        new Swiper(slider, {
-            modules: [EffectCoverflow],
-            slidesPerView: 3,
-            spaceBetween: 10,
-            effect: "coverflow",
-            centeredSlides: true,
-            initialSlide: 2,
-            loop: true,
-            coverflowEffect: {
-                rotate: 30,
-                stretch: 0,
-                depth: -30,
-                modifier: 1,
-                slideShadows: false,
-            },
-            breakpoints: {
-                1200: {
-                    slidesPerView: 5,
-                    spaceBetween: 40,
-                    coverflowEffect: {
-                        rotate: 15,
-                        stretch: -10,
-                        depth: -80,
-                        modifier: 1,
-                        slideShadows: false,
-                    },
-                }
-            }
-        })
-    }
-    
-    initAutoSlider() {
-        const slider = this.el.querySelector('.swiper');
-        new Swiper(slider, {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
         })
     }
 }

@@ -16,7 +16,8 @@
     align-items: center;
     gap: 4px;
 
-    @include text($white);
+    @include text(var(--currentColor));
+    transition: .2s linear;
   }
 
   &__icon {

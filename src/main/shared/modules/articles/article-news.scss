@@ -1,0 +1,144 @@
+.article-news {
+  --padding: 20px 30px 25px;
+  --photo-height: 300px;
+  --width: 370px;
+  --current-color: #{$black};
+  --bg: $white;
+  --line-clamp: 2;
+  @include hex-to-rgb($black, '--current-color-rgb');
+
+  display: flex;
+  flex-direction: column;
+  width: var(--width);
+  border-radius: $r-20;
+  background-color: var(--bg);
+  height: 100%;
+  overflow: hidden;
+
+  &--full {
+    --padding: 20px 0 20px;
+    --photo-height: 200px;
+    --line-clamp: 3;
+  }
+
+  &--attraction {
+    --padding: 30px;
+    --photo-height: 340px;
+    --width: 470px;
+    --bg: #F4F8FB;
+    --line-clamp: 2;
+  }
+
+  &--yellow {
+    --current-color: #{$yellow-light};
+    @include hex-to-rgb($yellow-light, '--current-color-rgb');
+  }
+
+  &--orange {
+    --current-color: #{$orange};
+    @include hex-to-rgb($orange, '--current-color-rgb');
+  }
+
+  &--blue {
+    --current-color: #{$blue};
+    @include hex-to-rgb($blue, '--current-color-rgb');
+  }
+
+  &--green {
+    --current-color: #{$green};
+    @include hex-to-rgb($green, '--current-color-rgb');
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $red;
+    }
+
+    span {
+      @include text($black, 14px, 300, none)
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: -17px;
+    right: -93px;
+    z-index: 0;
+    opacity: .05;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: var(--photo-height);
+    border-radius: $r-20;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__time {
+    @include text($grey-light)
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+
+    @include text(var(--current-color));
+
+    background-color: rgba(var(--current-color-rgb), .1);
+    border-radius: 100px;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: var(--padding);
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: $dark;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp);
+    line-clamp: var(--line-clamp);
+    -webkit-box-orient: vertical;
+  }
+}

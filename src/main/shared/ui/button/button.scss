@@ -12,6 +12,10 @@
   border-radius: $r-30;
   cursor: pointer;
 
+  &--orange {
+    background-color: $orange;
+  }
+
   &__icon {
     display: flex;
     align-items: center;

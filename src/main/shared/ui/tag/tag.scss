@@ -1,0 +1,12 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+
+  @include text(rgba($blue, .8), 16px);
+
+  background-color: $white;
+  border-radius: $r-30;
+  cursor: pointer;
+}

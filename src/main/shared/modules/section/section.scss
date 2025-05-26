@@ -1,5 +1,7 @@
 .section {
   position: relative;
+  overflow: hidden;
+
   &--intro {
     position: relative;
     display: flex;
@@ -25,5 +27,38 @@
 
   &--gradient {
     background: linear-gradient(180deg, #E8F1F7 0%, #FFFFFF 122.38%);
+  }
+
+  &--gray {
+    background-color: $grey-bg;
+  }
+
+  &--promo {
+    position: relative;
+    display: flex;
+    min-height: 437px;
+    background-image: var(--background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(358.28deg, rgba(0, 0, 0, 0) 1.33%, rgba(0, 0, 0, 0.5) 88.12%),
+      linear-gradient(270deg, rgba(0, 0, 0, 0) 17.66%, rgba(0, 0, 0, 0.5) 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+
+  &--logo-bg {
+    background-image: url('../assets/images/logo-bg.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
   }
 }

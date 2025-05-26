@@ -1,0 +1,14 @@
+.show-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+
+  @include text($black);
+
+  svg {
+    width: 9px;
+    height: 8px;
+    transform: rotate(-90deg);
+  }
+}
