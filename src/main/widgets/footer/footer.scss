@@ -1,4 +1,168 @@
 .footer {
   display: flex;
   flex-direction: column;
+  background-color: $black;
+  padding: 60px 0;
+  @include r($mobile) {
+    padding: 48px 0 20px;
+  }
+
+  &__intro {
+    @include r($mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 118px;
+    padding-bottom: 44px;
+
+    @include r($mobile) {
+      flex-direction: column;
+      gap: 37px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > .footer__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) auto;
+      width: 100%;
+      gap: 60px 0;
+
+      @include r($mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+  }
+
+  &__link {
+    @include text($white);
+
+    @include r($mobile) {
+      @include text($white, 12px)
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:has(.footer__list) {
+      gap: 14px;
+    }
+
+    .footer__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .footer__link {
+        @include text($grey, 16px, 300, none, 22px);
+
+        @include r($mobile) {
+          @include text($grey, 12px, 300, none, 22px);
+        }
+      }
+    }
+
+    &--long {
+      grid-column: span 2;
+    }
+
+    &--between {
+      @include r($mobile) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+    width: 83px;
+    height: 70px;
+
+    @include r($mobile) {
+      width: 48px;
+      height: 40px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 35px 0;
+    border-top: 1px solid $grey-border;
+    border-bottom: 1px solid $grey-border;
+
+    @include r($mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      padding: 25px 0;
+    }
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include r($mobile) {
+      gap: 15px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px 63px;
+    padding-top: 19px;
+
+    @include r($mobile) {
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    @include text($white, 20px, 400, none);
+
+    @include r($mobile) {
+      @include text($white, 14px, 400, none);
+    }
+
+    &--small {
+      @include text($grey, 14px, 300, none);
+
+      @include r($mobile) {
+        @include text($grey, 12px, 300, none, 22px);
+      }
+    }
+  }
 }

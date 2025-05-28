@@ -13,4 +13,10 @@
   &--light {
     color: $white;
   }
+
+  @include r($mobile) {
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 100%;
+  }
 }

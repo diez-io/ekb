@@ -6,6 +6,10 @@
   border-radius: $r-20;
   background-color: #6B6B6B1A;
 
+  @include r($mobile) {
+    max-width: 280px;
+  }
+
   &__header {
     display: flex;
     align-items: center;

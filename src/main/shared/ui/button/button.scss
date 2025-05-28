@@ -32,4 +32,10 @@
       transform: rotate(-90deg);
     }
   }
+
+  &--mob-wide {
+    @include r($mobile) {
+      width: 100%;
+    }
+  }
 }

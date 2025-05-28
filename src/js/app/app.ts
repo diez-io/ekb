@@ -1,6 +1,7 @@
 import Slider from "./slider";
 import {Fancybox} from "@fancyapps/ui";
 import Mask from "./mask";
+import Header from "./header";
 
 class App {
     constructor() {
@@ -8,34 +9,10 @@ class App {
     }
     
     init = () => {
-        this.createWindowScroll()
         this.createSlider()
         this.createFancybox()
         this.createMask()
-    }
-    
-    createWindowScroll = () => {
-        const header = document.querySelector('.header');
-        const logos = header.querySelectorAll('.logo img');
-        
-        const checkPosition = () => {
-            if (window.scrollY >= 200) {
-                header.classList.add('invert')
-                logos[0].setAttribute('hidden', '');
-                logos[1].removeAttribute('hidden');
-            } else {
-                header.classList.remove('invert')
-                logos[0].removeAttribute('hidden');
-                logos[1].setAttribute('hidden', '');
-            }
-        }
-        
-        checkPosition()
-        
-        window.addEventListener('scroll', () => {
-            if (!header) return;
-            checkPosition()
-        })
+        this.createHeader()
     }
     
     createSlider = () => {
@@ -64,6 +41,14 @@ class App {
     
     createMask = () => {
         new Mask();
+    }
+    
+    createHeader = () => {
+        const header = document.querySelector('.header');
+        
+        if (!header) return;
+        
+        new Header(header);
     }
 }
 

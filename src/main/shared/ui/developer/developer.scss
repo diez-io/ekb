@@ -1,0 +1,9 @@
+.developer {
+  margin-left: auto;
+  @include text($grey, 14px, 300, none);
+
+  @include r($mobile) {
+    margin-left: 0;
+    @include text($grey, 12px, 300, none, 22px);
+  }
+}

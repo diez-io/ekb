@@ -1,3 +1,7 @@
+:root {
+  --currentHeaderColor: #{$white};
+}
+
 * {
   box-sizing: border-box;
 }
@@ -96,12 +100,20 @@ svg {
   margin: 0 auto;
 }
 
-.logo {
-  display: flex;
-  flex-shrink: 0;
-
+.order-mob-0 {
   @include r($mobile) {
-    width: 100px;
-    height: 30px;
+    order: 0;
+  }
+}
+
+.order-mob-1 {
+  @include r($mobile) {
+    order: 1;
+  }
+}
+
+.order-mob-2 {
+  @include r($mobile) {
+    order: 2;
   }
 }

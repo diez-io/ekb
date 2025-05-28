@@ -26,7 +26,13 @@
                         </a>
                         <ul class="nav__submenu">
                             <li class="nav__item">
-                                <a href="#" class="nav__link"></a>
+                                <a href="#" class="nav__link">главное</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">история</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">вопросы и факты</a>
                             </li>
                         </ul>
                     </li>
@@ -39,7 +45,19 @@
                         </a>
                         <ul class="nav__submenu">
                             <li class="nav__item">
-                                <a href="#" class="nav__link"></a>
+                                <a href="#" class="nav__link">Екатеринбург</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">проекты благоустройства</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">инфраструктурные проекты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">образовние и карьера</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">карьера и бизнес</a>
                             </li>
                         </ul>
                     </li>
@@ -52,7 +70,19 @@
                         </a>
                         <ul class="nav__submenu">
                             <li class="nav__item">
-                                <a href="#" class="nav__link"></a>
+                                <a href="#" class="nav__link">виды туризма</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">маршруты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">афиша</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">достопримечательности</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">полезное для туризма</a>
                             </li>
                         </ul>
                     </li>
@@ -75,6 +105,9 @@
                         <use xlink:href="./assets/sprite.svg#icon-eye"></use>
                     </svg>
                 </div>
+                <div class="burger">
+                    <div class="burger__item"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -92,7 +125,7 @@
             </div>
         </div>
     </section>
-    <section class="section section--gradient pt-130 pb-130">
+    <section class="section section--gradient pt-130 ptm-70 pb-130 pbm-45">
     <div class="container">
         <div class="header-block">
             <h2 class="title">
@@ -273,7 +306,7 @@
                 </div>
             </article>
         </div>
-        <button class="button desktop-hidden">
+        <button class="button button--mob-wide desktop-hidden">
             <span>Виды туризма</span>
             <span class="button__icon">
                 <svg>
@@ -289,18 +322,19 @@
     </div>
 </section>
 
-    <section class="section section--gray pt-87 pb-94">
+    <section class="section section--gray pt-87 ptm-66 pb-94 pbm-120">
     <div class="container">
         <div class="grid">
-            <div class="grid__item grid__item--5">
+            <div class="grid__item grid__item--5 grid__item-mob--4">
                 <div class="poster">
                     <div class="poster__info">
                         <h2 class="title">Афиша</h2>
                         <p class="text">
-                            В год 300-летия Екатеринбург с особым размахом проведёт полюбившиеся многим и известные на весь
+                            В год 300-летия Екатеринбург с особым размахом проведёт полюбившиеся многим и известные на
+                            весь
                             мир флагманские мероприятия города, а также новые уникальные события.
                         </p>
-                        <button class="button">
+                        <button class="button mob-hidden">
                             <span>Все события</span>
                             <span class="button__icon">
                                 <svg>
@@ -319,7 +353,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid__item grid__item--7">
+            <div class="grid__item grid__item--7 grid__item-mob--4">
                 <div class="slider slider--auto slider--visible" data-slider="poster">
                     <div class="swiper">
                         <div class="swiper-wrapper">
@@ -449,6 +483,16 @@
                     </div>
                 </div>
             </div>
+            <div class="grid__item grid__item-mob--4 desktop-hidden">
+                <button class="button button--mob-wide">
+                    <span>Все события</span>
+                    <span class="button__icon">
+                        <svg>
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
         </div>
     </div>
     <div class="decor">
@@ -477,7 +521,7 @@
     </div>
 </section>
 
-    <section class="section section--gradient pt-130 pb-150">
+    <section class="section section--gradient pt-130 ptm-77 pb-150 pbm-67">
     <div class="container">
         <div class="header-block">
             <h2 class="title">Городской дайджест</h2>
@@ -491,7 +535,7 @@
             </button>
         </div>
         <div class="grid">
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4">
                 <a href="#" class="article-news article-news--full article-news--orange">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -514,7 +558,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4">
                 <a href="#" class="article-news article-news--full article-news--blue">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -537,7 +581,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4">
                 <a href="#" class="article-news article-news--full article-news--orange">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -560,7 +604,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4 mob-hidden">
                 <a href="#" class="article-news article-news--full article-news--blue">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -583,7 +627,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4 mob-hidden">
                 <a href="#" class="article-news article-news--full article-news--orange">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -606,7 +650,7 @@
                     </div>
                 </a>
             </div>
-            <div class="grid__item grid__item--4">
+            <div class="grid__item grid__item--4 grid__item-mob--4 mob-hidden">
                 <a href="#" class="article-news article-news--full article-news--blue">
                     <span class="article-news__badges"></span>
                     <picture class="article-news__picture">
@@ -638,7 +682,7 @@
     </div>
 </section>
 
-    <section class="section section--logo-bg pt-130 pb-130">
+    <section class="section section--logo-bg pt-130 ptm-38 pb-130 pbm-70">
     <div class="container">
         <div class="header-block">
             <h2 class="title">Мировой уровень</h2>
@@ -796,7 +840,7 @@
                             </svg>
                         </button>
                     </div>
-                    <button class="button">
+                    <button class="button button--mob-wide">
                         <span>больше объектов</span>
                         <span class="button__icon">
                             <svg>
@@ -815,94 +859,110 @@
         <div class="header-block">
             <h2 class="title">Отзывы</h2>
         </div>
-        <div class="grid">
-            <div class="grid__item grid__item--3">
-                <article class="article-review">
-                    <div class="article-review__header">
-                        <picture class="article-review__avatar">
-                            <img src="./assets/images/user-1.png" alt="">
-                        </picture>
-                        <h3 class="article-review__author">Иван</h3>
+        <div class="slider slider--auto-overflow slider--visible" data-slider="enhanced" data-slides="4">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="article-review">
+                            <div class="article-review__header">
+                                <picture class="article-review__avatar">
+                                    <img src="./assets/images/user-1.png" alt="">
+                                </picture>
+                                <h3 class="article-review__author">Иван</h3>
+                            </div>
+                            <p class="article-review__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
+                                vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
+                                maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                tristique nibh, mollis vehicula lectus tortor eu purus.
+                            </p>
+                            <div class="article-review__footer">
+                                <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
+                                <svg class="article-review__icon">
+                                    <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                                </svg>
+                            </div>
+                        </article>
                     </div>
-                    <p class="article-review__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
-                        vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
-                        maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
-                        tristique nibh, mollis vehicula lectus tortor eu purus.
-                    </p>
-                    <div class="article-review__footer">
-                        <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
-                        <svg class="article-review__icon">
-                            <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                    <div class="swiper-slide">
+                        <article class="article-review">
+                            <div class="article-review__header">
+                                <picture class="article-review__avatar">
+                                    <img src="./assets/images/user-1.png" alt="">
+                                </picture>
+                                <h3 class="article-review__author">Иван</h3>
+                            </div>
+                            <p class="article-review__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
+                                vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
+                                maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                tristique nibh, mollis vehicula lectus tortor eu purus.
+                            </p>
+                            <div class="article-review__footer">
+                                <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
+                                <svg class="article-review__icon">
+                                    <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                                </svg>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="article-review">
+                            <div class="article-review__header">
+                                <picture class="article-review__avatar">
+                                    <img src="./assets/images/user-1.png" alt="">
+                                </picture>
+                                <h3 class="article-review__author">Иван</h3>
+                            </div>
+                            <p class="article-review__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
+                                vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
+                                maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                tristique nibh, mollis vehicula lectus tortor eu purus.
+                            </p>
+                            <div class="article-review__footer">
+                                <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
+                                <svg class="article-review__icon">
+                                    <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                                </svg>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="article-review">
+                            <div class="article-review__header">
+                                <picture class="article-review__avatar">
+                                    <img src="./assets/images/user-1.png" alt="">
+                                </picture>
+                                <h3 class="article-review__author">Иван</h3>
+                            </div>
+                            <p class="article-review__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
+                                vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
+                                maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                tristique nibh, mollis vehicula lectus tortor eu purus.
+                            </p>
+                            <div class="article-review__footer">
+                                <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
+                                <svg class="article-review__icon">
+                                    <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                                </svg>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-control mob-hidden">
+                    <button class="swiper-btn swiper-btn--prev">
+                        <svg>
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
                         </svg>
-                    </div>
-                </article>
-            </div>
-            <div class="grid__item grid__item--3">
-                <article class="article-review">
-                    <div class="article-review__header">
-                        <picture class="article-review__avatar">
-                            <img src="./assets/images/user-1.png" alt="">
-                        </picture>
-                        <h3 class="article-review__author">Иван</h3>
-                    </div>
-                    <p class="article-review__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
-                        vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
-                        maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
-                        tristique nibh, mollis vehicula lectus tortor eu purus.
-                    </p>
-                    <div class="article-review__footer">
-                        <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
-                        <svg class="article-review__icon">
-                            <use xlink:href="./assets/sprite.svg#icon-date"></use>
+                    </button>
+                    <button class="swiper-btn swiper-btn--next">
+                        <svg>
+                            <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
                         </svg>
-                    </div>
-                </article>
-            </div>
-            <div class="grid__item grid__item--3">
-                <article class="article-review">
-                    <div class="article-review__header">
-                        <picture class="article-review__avatar">
-                            <img src="./assets/images/user-1.png" alt="">
-                        </picture>
-                        <h3 class="article-review__author">Иван</h3>
-                    </div>
-                    <p class="article-review__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
-                        vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
-                        maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
-                        tristique nibh, mollis vehicula lectus tortor eu purus.
-                    </p>
-                    <div class="article-review__footer">
-                        <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
-                        <svg class="article-review__icon">
-                            <use xlink:href="./assets/sprite.svg#icon-date"></use>
-                        </svg>
-                    </div>
-                </article>
-            </div>
-            <div class="grid__item grid__item--3">
-                <article class="article-review">
-                    <div class="article-review__header">
-                        <picture class="article-review__avatar">
-                            <img src="./assets/images/user-1.png" alt="">
-                        </picture>
-                        <h3 class="article-review__author">Иван</h3>
-                    </div>
-                    <p class="article-review__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare
-                        vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur
-                        maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
-                        tristique nibh, mollis vehicula lectus tortor eu purus.
-                    </p>
-                    <div class="article-review__footer">
-                        <time class="article-review__time" datetime="2024.11.07">07.11.2024</time>
-                        <svg class="article-review__icon">
-                            <use xlink:href="./assets/sprite.svg#icon-date"></use>
-                        </svg>
-                    </div>
-                </article>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -912,6 +972,161 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
+            <div class="footer__top">
+                <div class="footer__intro">
+                    <a href="/" class="footer__logo">
+                        <img src="./assets/images/logo.svg" alt="">
+                    </a>
+                    <form action="#" class="search-form desktop-hidden">
+                        <input class="search-form__input" type="search" placeholder="Поиск по сайту...">
+                        <button class="search-form__button" type="submit">
+                            <svg class="search-form__icon">
+                                <use xlink:href="./assets/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    О Екатеринбурге и<br>
+                                    городах спутниках
+                                </a>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Главное</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">История</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Вопросы и факты</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Город развивается
+                                </a>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Екатеринбург</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Проекты благоустройства</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Инфраструктурные проекты</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Образование и карьера</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Карьера и бизнес</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    гостям и туристам
+                                </a>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Виды туризма</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Маршруты</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Афиша</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Достопримечательности</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Полезное для туриста</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__item footer__item--between">
+                                <a class="footer__link" href="#">
+                                    Спецпроекты
+                                </a>
+                                <a class="footer__link" href="#">
+                                    друзья города
+                                </a>
+                                <a class="footer__link" href="#">
+                                    справочная<br>
+                                    информация
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Мы в соц.сетях
+                                </a>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">МКУ Столица Урала</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">ВКонтакте Екатеринбург</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">ТИЦ Екб ТГ</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">ТГ Екатеринбург</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Наши контакты
+                                </a>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">+7-900-500-32-32</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">email@mail.ru</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer__item footer__item--long mob-hidden">
+                                <form action="#" class="search-form">
+                                    <input class="search-form__input" type="search" placeholder="Поиск по сайту...">
+                                    <button class="search-form__button" type="submit">
+                                        <svg class="search-form__icon">
+                                            <use xlink:href="./assets/sprite.svg#icon-search"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__meta">
+                <a href="#" class="footer__element">
+                    <picture class="footer__picture">
+                        <img src="./assets/images/logo-ekb-eng.svg" alt="">
+                    </picture>
+                    <span class="footer__text">Туристический портал  Екатеринбурга</span>
+                </a>
+                <a href="#" class="footer__element">
+                    <picture class="footer__picture">
+                        <img src="./assets/images/logo-ekb-off.svg" alt="">
+                    </picture>
+                    <span class="footer__text">Официальный сайт Екатеринбурга</span>
+                </a>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__text footer__text--small order-mob-1">© Екатеринбург 300, 2022</p>
+                <a href="#" class="footer__text footer__text--small order-mob-0">Политика конфиденциальности</a>
+                <a href="#" class="developer order-mob-0">Разработчик</a>
+            </div>
         </div>
     </div>
 </footer>

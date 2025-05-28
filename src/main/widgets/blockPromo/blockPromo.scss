@@ -5,4 +5,8 @@
   justify-content: center;
   gap: 20px;
   height: 100%;
+
+  @include r($mobile) {
+    gap: 51px;
+  }
 }

@@ -4,9 +4,21 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
 
-  @for $i from 1 through 12 {
-    .grid__item--#{$i} {
-      grid-column: span $i;
+  @include rmin($mobile + 1) {
+    @for $i from 1 through 12 {
+      .grid__item--#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  @include r($mobile) {
+    grid-template-columns: repeat(4, 1fr);
+
+    @for $i from 1 through 4 {
+      .grid__item-mob--#{$i} {
+        grid-column: span $i;
+      }
     }
   }
 }

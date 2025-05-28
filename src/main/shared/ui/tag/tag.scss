@@ -9,4 +9,9 @@
   background-color: $white;
   border-radius: $r-30;
   cursor: pointer;
+
+  @include r($mobile) {
+    border: 1px solid $blue-light;
+    @include text(rgba($blue, .8), 13px);
+  };
 }

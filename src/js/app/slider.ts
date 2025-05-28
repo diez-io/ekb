@@ -43,6 +43,9 @@ class Slider {
         case 'poster':
             this.initPosterSlider();
             break;
+        case 'enhanced':
+            this.initEnhancedSlider();
+            break;
         case 'thumbs':
             this.initThumbsSlider();
             break;
@@ -155,6 +158,46 @@ class Slider {
                 swiper: thumbSlider,
             },
         })
+    }
+    
+    initEnhancedSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            watchSlidesProgress: true,
+            watchOverflow: true,
+            navigation: {
+                prevEl: this.buttonPrev,
+                nextEl: this.buttonNext,
+                disabledClass: 'slider__btn--disabled'
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: this.slidesCount ? this.slidesCount : 'auto',
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                init: function() {
+                    checkNavigation(this);
+                },
+                resize: function() {
+                    checkNavigation(this);
+                }
+            }
+        })
+        
+        function checkNavigation(swiper: Swiper) {
+            if (swiper.slides.length <= swiper.params.slidesPerView) {
+                swiper.navigation.nextEl.style.display = 'none';
+                swiper.navigation.prevEl.style.display = 'none';
+            } else {
+                swiper.navigation.nextEl.style.display = 'flex';
+                swiper.navigation.prevEl.style.display = 'flex';
+            }
+        }
     }
 }
 
