@@ -100,6 +100,14 @@
     }
   }
 
+  &--light {
+    --bg: #{$white};
+  }
+
+  &--max-size {
+    --width: 100%;
+  }
+
   &--yellow {
     --current-color: #{$yellow-light};
     @include hex-to-rgb($yellow-light, '--current-color-rgb');

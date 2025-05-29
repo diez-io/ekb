@@ -14,4 +14,20 @@
     border: 1px solid $blue-light;
     @include text(rgba($blue, .8), 13px);
   };
+
+  &--filter {
+    padding: 10px 30px;
+    @include text(rgba($blue, .8), 14px);
+  }
+
+  &.active {
+    background: $blue;
+    color: $white;
+  }
+
+  svg {
+    display: flex;
+    width: 12px;
+    height: 12px;
+  }
 }

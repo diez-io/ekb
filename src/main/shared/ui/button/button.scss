@@ -38,4 +38,10 @@
       width: 100%;
     }
   }
+
+  &--down {
+    .button__icon {
+      transform: rotate(90deg);
+    }
+  }
 }
