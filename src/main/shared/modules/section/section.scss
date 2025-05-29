@@ -37,6 +37,10 @@
     background-color: $grey-bg;
   }
 
+  &--study {
+    background: linear-gradient(0, #E8F1F7 0%, #F4F8FB 100%);
+  }
+
   &--promo {
     position: relative;
     display: flex;
@@ -72,6 +76,10 @@
     @include r($mobile) {
       background-size: 481px 413px;
       background-position: left -188px top;
+    }
+
+    &-center {
+      background-position: left center;
     }
   }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body>
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg-2.jpg')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    О Екатеринбурге<br>
+                    и городах спутниках
+                </h1>
+                <p class="subtitle">
+                    В 2023 году Екатеринбург отпразднует свое 300-летие. Свою историю город отсчитывает с 18 ноября 1723
+                    года, когда были запущены цеха крупнейшего в России железоделательного Екатерининского завода.
+                </p>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockInfo %>
+    <%= htmlWebpackPlugin.options.widgets.blockHistory %>
+    <%= htmlWebpackPlugin.options.widgets.blockStudy %>
+    <%= htmlWebpackPlugin.options.widgets.blockFaq %>
+    <%= htmlWebpackPlugin.options.widgets.blockMapInfo %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

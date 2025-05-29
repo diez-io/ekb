@@ -1,0 +1,4 @@
+.subtitle {
+  max-width: 610px;
+  @include text($white, 24px, 300, none)
+}

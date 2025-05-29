@@ -1,0 +1,40 @@
+.study {
+  display: grid;
+  grid-template-columns: 1fr 670px;
+  align-items: center;
+  gap: 50px;
+
+  @include r($mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 670px;
+    height: 425px;
+    border-radius: $r-15;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+
+    @include r($mobile) {
+      margin: 0 -20px;
+      width: calc(100% + 40px);
+      height: 297px;
+      border-radius: 0;
+    }
+  }
+}

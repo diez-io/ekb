@@ -2,6 +2,7 @@ import Slider from "./slider";
 import {Fancybox} from "@fancyapps/ui";
 import Mask from "./mask";
 import Header from "./header";
+import Faq from "./faq";
 
 class App {
     constructor() {
@@ -13,6 +14,17 @@ class App {
         this.createFancybox()
         this.createMask()
         this.createHeader()
+        this.createFaqBlock()
+    }
+    
+    createFaqBlock = () => {
+        const faqBlock = document.querySelectorAll('.faq');
+        
+        if (!faqBlock) return;
+        
+        faqBlock.forEach(el => {
+            new Faq(el);
+        })
     }
     
     createSlider = () => {
