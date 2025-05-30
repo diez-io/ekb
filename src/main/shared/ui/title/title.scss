@@ -4,14 +4,22 @@
   font-size: 64px;
   line-height: 100%;
   text-transform: uppercase;
-  color: $black;
+  color: var(--text-black);
+
+  &--medium {
+    font-size: 48px;
+  }
 
   &--small {
     font-size: 36px;
   }
 
   &--light {
-    color: $white;
+    color: var(--white);
+  }
+
+  b {
+    color: var(--orange);
   }
 
   @include r($mobile) {

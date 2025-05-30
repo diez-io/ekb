@@ -6,14 +6,14 @@
   padding: 16px 30px;
   min-width: 180px;
 
-  @include text($white);
+  @include text(var(--white));
 
-  background-color: $blue;
+  background-color: var(--blue);
   border-radius: $r-30;
   cursor: pointer;
 
   &--orange {
-    background-color: $orange;
+    background-color: var(--orange);
   }
 
   &__icon {
@@ -23,8 +23,8 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: $white;
-    color: $blue;
+    background-color: var(--white);
+    color: var(--blue);
 
     svg {
       width: 8px;

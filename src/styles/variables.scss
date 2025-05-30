@@ -3,44 +3,81 @@
 // Шрифты
 $font-main: "Iset Sans", sans-serif;
 
-// Цвета
-$dark: #000000;
-$black: #202020;
-$grey-border: #3D3A3A;
-$grey-dark: #505050;
-$grey-dark-light: #797979;
-$grey: #B6B6B6;
-$grey-light: #B3B5C3;
-$grey-bg: #F4F8FB;
-$white: #FFFFFF;
-$red: #E4342E;
-$orange: #FD6524;
-$orange-light: #F39314;
-$yellow: #EFBE00;
-$yellow-light: #FED431;
-$green: #1AB31E;
-$green-accent: #00B400;
-$green-light: #64AE60;
-$blue: #1AA1E0;
-$blue-light: #48B4E6;
-$purple: #9F5AA7;
+$themes: (
+        "light": (
+                "text-dark": #000000,
+                "dark": #000000,
+                "black": #202020,
+                "text-black": #202020,
+                "grey-border": #3D3A3A,
+                "grey-dark": #505050,
+                "grey-dark-light": #797979,
+                "grey": #B6B6B6,
+                "grey-light": #B3B5C3,
+                "grey-gradient": #E8F1F7,
+                "grey-bg": #F4F8FB,
+                "main-bg": #FFFFFF,
+                "white": #FFFFFF,
+                "red": #E4342E,
+                "orange": #FD6524,
+                "orange-light": #F39314,
+                "yellow": #EFBE00,
+                "yellow-light": #FED431,
+                "green": #1AB31E,
+                "green-accent": #00B400,
+                "green-light": #64AE60,
+                "blue": #1AA1E0,
+                "blue-light": #48B4E6,
+                "purple": #9F5AA7,
+        ),
+        "black": (
+                "text-dark": #FFFFFF,
+                "dark": #000000,
+                "black": #202020,
+                "text-black": #FFFFFF,
+                "grey-border": #3D3A3A,
+                "grey-dark": #505050,
+                "grey-dark-light": #797979,
+                "grey": #B6B6B6,
+                "grey-light": #B3B5C3,
+                "grey-gradient": #212121,
+                "grey-bg": #212121,
+                "main-bg": #1C1C1C,
+                "white": #FFFFFF,
+                "red": #E4342E,
+                "orange": #FD6524,
+                "orange-light": #F39314,
+                "yellow": #EFBE00,
+                "yellow-light": #FED431,
+                "green": #1AB31E,
+                "green-accent": #00B400,
+                "green-light": #64AE60,
+                "blue": #1AA1E0,
+                "blue-light": #48B4E6,
+                "purple": #9F5AA7,
+        )
+);
 
-:root {
-  .theme-black {
-    $dark: #000000;
-    $black: #202020;
-    $white: #FFFFFF;
-    $grey: #B6B6B6;
-    $red: #E4342E;
-    $orange: #FD6524;
-    $orange-light: #F39314;
-    $yellow: #EFBE00;
-    $green: #1AB31E;
-    $green-accent: #00B400;
-    $blue: #1AA1E0;
-    $purple: #9F5AA7;
+@mixin theme($theme-name) {
+  $theme: map-get($themes, $theme-name);
+
+  :root {
+    @each $key, $value in $theme {
+      --#{$key}: #{$value};
+    }
   }
 }
+
+@each $theme-name, $theme in $themes {
+  .theme-#{$theme-name} {
+    @each $key, $value in $theme {
+      --#{$key}: #{$value};
+      --#{$key}-rgb: #{red($value)}, #{green($value)}, #{blue($value)}
+    }
+  }
+}
+
+@include theme(light);
 
 $r-30: 30px;
 $r-20: 20px;
@@ -50,17 +87,13 @@ $mobile: 1199;
 $mob-min: 767;
 
 // Миксины
-@mixin text($color: $black, $size: 14px, $weight: 400, $textTransform: uppercase, $line-height: 100%) {
+@mixin text($color: var(--black), $size: 14px, $weight: 400, $textTransform: uppercase, $line-height: 100%) {
   font-family: $font-main;
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
   text-transform: $textTransform;
   color: #{$color};
-}
-
-@mixin hex-to-rgb($color, $name) {
-  #{$name}: #{red($color)}, #{green($color)}, #{blue($color)};
 }
 
 @mixin r($width) {

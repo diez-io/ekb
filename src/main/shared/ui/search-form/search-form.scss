@@ -4,16 +4,16 @@
   justify-content: center;
   gap: 20px;
   padding: 14px 22px;
-  border: 1px solid $grey-border;
+  border: 1px solid var(--grey-border);
 
   &__input {
     display: flex;
     flex-grow: 1;
 
-    @include text($white, 14px, 300, none);
+    @include text(var(--white), 14px, 300, none);
 
     &::placeholder {
-      color: $grey-border;
+      color: var(--grey-border);
     }
 
     &::-webkit-search-decoration,
@@ -30,7 +30,7 @@
     width: 21px;
     height: 21px;
     cursor: pointer;
-    color: $white;
+    color: var(--white);
   }
 
   &__icon {

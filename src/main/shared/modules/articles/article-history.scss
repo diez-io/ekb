@@ -24,10 +24,10 @@
   }
 
   &__title {
-    @include text($black, 26px, 400, none);
+    @include text(var(--black), 26px, 400, none);
 
     @include r($mobile) {
-      @include text($black, 20px, 400, none);
+      @include text(var(--black), 20px, 400, none);
     }
   }
 }

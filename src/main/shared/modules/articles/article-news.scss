@@ -2,11 +2,10 @@
   --padding: 20px 30px 25px;
   --photo-height: 300px;
   --width: 370px;
-  --current-color: #{$black};
-  --bg: #{$white};
+  --current-color: var(--black);
+  --current-color-rgb: var(--black-rgb);
+  --bg: var(--white);
   --line-clamp: 2;
-
-  @include hex-to-rgb($black, '--current-color-rgb');
 
   position: relative;
   display: flex;
@@ -29,6 +28,10 @@
     --bg: transparent;
     --line-clamp: 3;
 
+    .article-news__title {
+      color: var(--text-dark);
+    }
+
     @include r($mobile) {
       --padding: 18px 26px;
 
@@ -39,7 +42,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba($dark, .3);
+        background: rgba(var(--dark-rgb), .3);
         z-index: 0;
       }
     }
@@ -56,20 +59,20 @@
         padding: 4px 6px;
         color: var(--current-color);
         border-radius: 100px;
-        background-color: $white;
+        background-color: var(--white);
       }
     }
 
     .article-news__tag {
       @include r($mobile) {
         padding: 4px 6px;
-        background-color: $white;
+        background-color: var(--white);
       }
     }
 
     .article-news__title {
       @include r($mobile) {
-        color: $white;
+        color: var(--white);
       }
     }
 
@@ -77,6 +80,17 @@
       @include r($mobile) {
         display: none;
       }
+    }
+  }
+
+  &--promo {
+    --padding: 20px 0 20px;
+    --photo-height: 300px;
+    --bg: transparent;
+    --line-clamp: 3;
+
+    .article-news__title {
+      color: var(--text-dark);
     }
   }
 
@@ -101,7 +115,7 @@
   }
 
   &--light {
-    --bg: #{$white};
+    --bg: var(--white);
   }
 
   &--max-size {
@@ -109,23 +123,23 @@
   }
 
   &--yellow {
-    --current-color: #{$yellow-light};
-    @include hex-to-rgb($yellow-light, '--current-color-rgb');
+    --current-color: var(--yellow-light);
+    --current-color-rgb: var(--yellow-light-rgb);
   }
 
   &--orange {
-    --current-color: #{$orange};
-    @include hex-to-rgb($orange, '--current-color-rgb');
+    --current-color: var(--orange);
+    --current-color-rgb: var(--orange-rgb);
   }
 
   &--blue {
-    --current-color: #{$blue};
-    @include hex-to-rgb($blue, '--current-color-rgb');
+    --current-color: var(--blue);
+    --current-color-rgb: var(--blue-rgb);
   }
 
   &--green {
-    --current-color: #{$green};
-    @include hex-to-rgb($green, '--current-color-rgb');
+    --current-color: var(--green);
+    --current-color-rgb: var(--green-rgb);
   }
 
   &__place {
@@ -136,11 +150,11 @@
     svg {
       width: 16px;
       height: 16px;
-      color: $red;
+      color: var(--red);
     }
 
     span {
-      @include text($black, 14px, 300, none)
+      @include text(var(--text-black), 14px, 300, none)
     }
   }
 
@@ -185,7 +199,7 @@
   }
 
   &__time {
-    @include text($grey-light)
+    @include text(var(--grey-light))
   }
 
   &__tag {
@@ -213,7 +227,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 100%;
-    color: $dark;
+    color: var(--dark);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: var(--line-clamp);

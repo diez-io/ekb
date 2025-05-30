@@ -1,6 +1,6 @@
 .article-intro-card {
-  --card-color: #{$black};
-  @include hex-to-rgb($black, '--card-color-rgb');
+  --card-color: var(--black);
+  --card-color-rgb: var(--black-rgb);
 
   position: relative;
   display: flex;
@@ -20,33 +20,33 @@
   }
 
   &--red {
-    --card-color: #{$red};
-    @include hex-to-rgb($red, '--card-color-rgb');
+    --card-color: var(--red);
+    --card-color-rgb: var(--red-rgb);
   }
 
   &--orange {
-    --card-color: #{$orange};
-    @include hex-to-rgb($orange, '--card-color-rgb');
+    --card-color: var(--orange);
+    --card-color-rgb: var(--red-rgb);
   }
 
   &--purple {
-    --card-color: #{$purple};
-    @include hex-to-rgb($purple, '--card-color-rgb');
+    --card-color: var(--purple);
+    --card-color-rgb: var(--purple-rgb);
   }
 
   &--green {
-    --card-color: #{$green};
-    @include hex-to-rgb($green, '--card-color-rgb');
+    --card-color: var(--green);
+    --card-color-rgb: var(--green-rgb);
   }
 
   &--yellow {
-    --card-color: #{$yellow};
-    @include hex-to-rgb($yellow, '--card-color-rgb');
+    --card-color: var(--yellow);
+    --card-color-rgb: var(--yellow-rgb);
   }
 
   &--blue {
-    --card-color: #{$blue};
-    @include hex-to-rgb($blue, '--card-color-rgb');
+    --card-color: var(--blue);
+    --card-color-rgb: var(--blue-rgb);
   }
 
   &__tags {
@@ -71,7 +71,7 @@
     align-items: center;
     justify-content: center;
     padding: 6px 14px;
-    @include text($white);
+    @include text(var(--white));
     border-radius: 100px;
     background: rgba(var(--card-color-rgb), .7);
   }
@@ -123,7 +123,7 @@
     font-weight: 400;
     font-size: 26px;
     line-height: 27px;
-    color: $white;
+    color: var(--white);
 
     @include r($mobile) {
       font-size: 24px;
@@ -135,7 +135,7 @@
     align-items: center;
     gap: 6px;
 
-    @include text($white);
+    @include text(var(--white));
   }
 
   &__icon {

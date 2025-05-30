@@ -10,4 +10,13 @@
     align-items: flex-start;
     margin-bottom: 30px;
   }
+
+  .text,
+  .subtitle {
+    max-width: 670px;
+  }
+
+  .swiper-control {
+    margin-top: 0;
+  }
 }

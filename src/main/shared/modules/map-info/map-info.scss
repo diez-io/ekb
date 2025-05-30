@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 705px;
     padding: 40px;
-    background-color: $white;
+    background-color: var(--white);
     border-radius: $r-20;
     box-shadow: -10px 20px 100px 0 #8F9AB540;
     transform: translateY(-50%);
@@ -52,7 +52,7 @@
     font-size: 36px;
     line-height: 100%;
     text-transform: uppercase;
-    color: $green-light;
+    color: var(--green-light);
 
     @include r($mobile) {
       font-weight: 400;
@@ -81,7 +81,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
-    color: $black;
+    color: var(--black);
 
     @include r($mobile) {
       font-weight: 700;
@@ -93,7 +93,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    color: $grey-dark-light;
+    color: var(--grey-dark-light);
 
     @include r($mobile) {
       font-weight: 400;

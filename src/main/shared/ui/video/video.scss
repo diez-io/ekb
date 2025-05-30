@@ -1,0 +1,19 @@
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 175px;
+  aspect-ratio: 16/9;
+  background-color: var(--dark);
+  border-radius: $r-15;
+  overflow: hidden;
+
+  video {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

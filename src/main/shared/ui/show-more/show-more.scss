@@ -4,7 +4,7 @@
   gap: 6px;
   margin-top: auto;
 
-  @include text($black);
+  @include text(var(--text-black));
 
   svg {
     width: 9px;

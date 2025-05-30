@@ -5,21 +5,25 @@ class Slider {
     el;
     sliderType;
     buttonPrev;
+    buttonPrevDesktop;
     buttonNext;
+    buttonNextDesktop;
     slidesCount;
     pagination;
     desktopOnly;
     mobileOnly;
     media;
     isAuto;
+    isDoubleControl;
     offset;
     
     constructor(el: Element) {
-        this.el = el;
+        this.el = el as HTMLElement;
         this.sliderType = this.el.getAttribute('data-slider');
         this.slidesCount = this.el.getAttribute('data-slides')
-        this.isAuto = this.el.hasAttribute('data-auto');
         this.offset = this.el.hasAttribute('data-offset');
+        this.isAuto = this.el.hasAttribute('data-auto');
+        this.isDoubleControl = this.el.hasAttribute('data-double')
         
         this.buttonPrev = this.el.querySelector('.swiper-btn--prev');
         this.buttonNext = this.el.querySelector('.swiper-btn--next');
@@ -28,6 +32,9 @@ class Slider {
         this.media = matchMedia('(max-width: 1199px)');
         this.desktopOnly = this.el.hasAttribute('data-desktop-only');
         this.mobileOnly = this.el.hasAttribute('data-mobile-only');
+        
+        this.buttonPrevDesktop = this.el.parentElement.querySelector('.swiper-btn--prev');
+        this.buttonNextDesktop = this.el.parentElement.querySelector('.swiper-btn--next');
         
         this.init();
     }
@@ -65,7 +72,7 @@ class Slider {
                 disabledClass: 'slider__btn--disabled'
             },
             autoplay: {
-              delay: 6000,
+                delay: 6000,
             },
             loop: true,
             pagination: {
@@ -161,8 +168,23 @@ class Slider {
     }
     
     initEnhancedSlider() {
+        const checkDesktopNaviagtion = (swiper: Swiper) => {
+            if (this.buttonPrevDesktop && this.buttonNextDesktop) {
+                this.buttonPrevDesktop.classList.toggle('slider__btn--disabled', swiper.isBeginning);
+                this.buttonNextDesktop.classList.toggle('slider__btn--disabled', swiper.isEnd);
+                
+                if (swiper.isBeginning) {
+                    this.buttonPrevDesktop.setAttribute('disabled', ' ');
+                    this.buttonNextDesktop.removeAttribute('disabled');
+                } else {
+                    this.buttonNextDesktop.setAttribute('disabled', ' ');
+                    this.buttonPrevDesktop.removeAttribute('disabled');
+                }
+            }
+        }
+        
         const slider = this.el.querySelector('.swiper');
-        new Swiper(slider, {
+        const currentSlider = new Swiper(slider, {
             modules: [Navigation],
             slidesPerView: 'auto',
             spaceBetween: 10,
@@ -180,22 +202,42 @@ class Slider {
                 }
             },
             on: {
-                init: function() {
+                init: (swiper: Swiper) => {
+                    checkNavigation(swiper);
+                    checkDesktopNaviagtion(swiper);
+                },
+                slideChange: (swiper: Swiper) => {
+                    checkDesktopNaviagtion(swiper);
+                },
+                resize: function () {
                     checkNavigation(this);
                 },
-                resize: function() {
-                    checkNavigation(this);
-                }
             }
         })
         
+        if (this.buttonPrevDesktop) {
+            this.buttonPrevDesktop.addEventListener('click', (e) => {
+                currentSlider.slidePrev()
+            })
+        }
+        
+        if (this.buttonNextDesktop) {
+            this.buttonNextDesktop.addEventListener('click', (e) => {
+                currentSlider.slideNext()
+            })
+        }
+        
         function checkNavigation(swiper: Swiper) {
             if (swiper.slides.length <= swiper.params.slidesPerView) {
-                swiper.navigation.nextEl.style.display = 'none';
-                swiper.navigation.prevEl.style.display = 'none';
+                if (swiper.navigation.nextEl && swiper.navigation.prevEl) {
+                    swiper.navigation.nextEl.style.display = 'none';
+                    swiper.navigation.prevEl.style.display = 'none';
+                }
             } else {
-                swiper.navigation.nextEl.style.display = 'flex';
-                swiper.navigation.prevEl.style.display = 'flex';
+                if (swiper.navigation.nextEl && swiper.navigation.prevEl) {
+                    swiper.navigation.nextEl.style.display = 'flex';
+                    swiper.navigation.prevEl.style.display = 'flex';
+                }
             }
         }
     }

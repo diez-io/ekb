@@ -1,7 +1,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: $black;
+  background-color: var(--black);
   padding: 60px 0;
   @include r($mobile) {
     padding: 48px 0 20px;
@@ -54,10 +54,10 @@
   }
 
   &__link {
-    @include text($white);
+    @include text(var(--white));
 
     @include r($mobile) {
-      @include text($white, 12px)
+      @include text(var(--white), 12px)
     }
   }
 
@@ -76,10 +76,10 @@
       gap: 12px;
 
       .footer__link {
-        @include text($grey, 16px, 300, none, 22px);
+        @include text(var(--grey), 16px, 300, none, 22px);
 
         @include r($mobile) {
-          @include text($grey, 12px, 300, none, 22px);
+          @include text(var(--grey), 12px, 300, none, 22px);
         }
       }
     }
@@ -113,8 +113,8 @@
     gap: 50px;
     flex-wrap: wrap;
     padding: 35px 0;
-    border-top: 1px solid $grey-border;
-    border-bottom: 1px solid $grey-border;
+    border-top: 1px solid var(--grey-border);
+    border-bottom: 1px solid var(--grey-border);
 
     @include r($mobile) {
       flex-direction: column;
@@ -151,17 +151,17 @@
   }
 
   &__text {
-    @include text($white, 20px, 400, none);
+    @include text(var(--white), 20px, 400, none);
 
     @include r($mobile) {
-      @include text($white, 14px, 400, none);
+      @include text(var(--white), 14px, 400, none);
     }
 
     &--small {
-      @include text($grey, 14px, 300, none);
+      @include text(var(--grey), 14px, 300, none);
 
       @include r($mobile) {
-        @include text($grey, 12px, 300, none, 22px);
+        @include text(var(--grey), 12px, 300, none, 22px);
       }
     }
   }

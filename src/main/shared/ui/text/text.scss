@@ -1,7 +1,7 @@
 .text {
-  @include text($black, 16px, 300, none, 22px);
+  @include text(var(--text-black), 16px, 300, none, 22px);
 
   &--gray {
-    color: $grey-dark-light;
+    color: var(--grey-dark-light);
   }
 }
