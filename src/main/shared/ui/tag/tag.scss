@@ -17,7 +17,7 @@
   cursor: pointer;
 
   @include r($mobile) {
-    border: 1px solid var(--blue-light);
+    border: 1px solid rgba(var(--text-color), 1);
     @include text(rgba(var(--text-color), .8), 13px);
   };
 
