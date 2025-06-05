@@ -1,0 +1,68 @@
+section:has(.blockAttractionsDirections) {
+  background-image: none;
+  background-color: var(--grey-gradient);
+}
+
+.blockAttractionsDirections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include rmin($mobile + 1) {
+    gap: 60px;
+    $offset: 20px;
+    position: relative;
+
+    @for $i from 0 through 100 {
+      $pos: $i * 3;
+
+      & > .article-intro-card:nth-child(#{$pos + 2}) {
+        transform: translateY($offset);
+      }
+
+      & > .article-intro-card:nth-child(#{$pos + 3}) {
+        transform: translateY($offset * 2);
+      }
+    }
+  }
+
+  .article-intro-card {
+    @include r($mobile) {
+      &:nth-child(1n+4) {
+        display: none;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    .swiper {
+      width: 100%;
+
+      &-control {
+        margin-top: 0;
+        top: 40%;
+
+        @include rmin($mobile) {
+          position: absolute;
+          top: -115px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+
+  &__decor {
+    position: absolute;
+    top: -130px;
+    right: calc(100% + 40px);
+
+    height: 160%;
+    width: auto;
+  }
+}

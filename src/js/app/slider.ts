@@ -16,7 +16,7 @@ class Slider {
     isAuto;
     isDoubleControl;
     offset;
-    
+
     constructor(el: Element) {
         this.el = el as HTMLElement;
         this.sliderType = this.el.getAttribute('data-slider');
@@ -24,21 +24,21 @@ class Slider {
         this.offset = this.el.hasAttribute('data-offset');
         this.isAuto = this.el.hasAttribute('data-auto');
         this.isDoubleControl = this.el.hasAttribute('data-double')
-        
+
         this.buttonPrev = this.el.querySelector('.swiper-btn--prev');
         this.buttonNext = this.el.querySelector('.swiper-btn--next');
         this.pagination = this.el.querySelector('.swiper-pagination');
-        
+
         this.media = matchMedia('(max-width: 1199px)');
         this.desktopOnly = this.el.hasAttribute('data-desktop-only');
         this.mobileOnly = this.el.hasAttribute('data-mobile-only');
-        
+
         this.buttonPrevDesktop = this.el.parentElement.querySelector('.swiper-btn--prev');
         this.buttonNextDesktop = this.el.parentElement.querySelector('.swiper-btn--next');
-        
+
         this.init();
     }
-    
+
     init() {
         switch (this.sliderType) {
         case 'intro':
@@ -50,6 +50,12 @@ class Slider {
         case 'poster':
             this.initPosterSlider();
             break;
+        case 'pickYourRoute':
+            this.initPickYourRouteSlider();
+            break;
+        case 'attractions':
+            this.initAttractionsSlider();
+            break;
         case 'enhanced':
             this.initEnhancedSlider();
             break;
@@ -58,7 +64,7 @@ class Slider {
             break;
         }
     }
-    
+
     initIntroSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
@@ -82,14 +88,14 @@ class Slider {
             on: {
                 slideChangeTransitionStart: () => {
                     const wrapper = slider.querySelector('.swiper-wrapper') as HTMLElement;
-                    
+
                     wrapper.style.transitionTimingFunction = 'ease';
                     wrapper.style.transitionDuration = '0.95s';
                 }
             }
         })
     }
-    
+
     initDefaultSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
@@ -120,7 +126,7 @@ class Slider {
             }
         })
     }
-    
+
     initPosterSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
@@ -135,12 +141,52 @@ class Slider {
             },
         })
     }
-    
+
+    initPickYourRouteSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: 30,
+            watchSlidesProgress: true,
+            navigation: {
+                prevEl: this.buttonPrev,
+                nextEl: this.buttonNext,
+                disabledClass: 'slider__btn--disabled'
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 'auto',
+                }
+            },
+        })
+    }
+
+    initAttractionsSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: 30,
+            watchSlidesProgress: true,
+            navigation: {
+                prevEl: this.buttonPrev,
+                nextEl: this.buttonNext,
+                disabledClass: 'slider__btn--disabled'
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                }
+            },
+        })
+    }
+
     initThumbsSlider() {
         const slider = this.el.querySelector('.swiper');
         const thumb = document.querySelector('[data-slider="thumb"]');
         const thumbSwiper = thumb.querySelector('.swiper');
-        
+
         const thumbSlider = new Swiper(thumbSwiper, {
             modules: [Navigation],
             slidesPerView: 5,
@@ -156,7 +202,7 @@ class Slider {
                 }
             }
         })
-        
+
         new Swiper(slider, {
             modules: [Navigation, Pagination, Thumbs],
             slidesPerView: 1,
@@ -166,13 +212,13 @@ class Slider {
             },
         })
     }
-    
+
     initEnhancedSlider() {
         const checkDesktopNaviagtion = (swiper: Swiper) => {
             if (this.buttonPrevDesktop && this.buttonNextDesktop) {
                 this.buttonPrevDesktop.classList.toggle('slider__btn--disabled', swiper.isBeginning);
                 this.buttonNextDesktop.classList.toggle('slider__btn--disabled', swiper.isEnd);
-                
+
                 if (swiper.isBeginning) {
                     this.buttonPrevDesktop.setAttribute('disabled', ' ');
                     this.buttonNextDesktop.removeAttribute('disabled');
@@ -182,7 +228,7 @@ class Slider {
                 }
             }
         }
-        
+
         const slider = this.el.querySelector('.swiper');
         const currentSlider = new Swiper(slider, {
             modules: [Navigation],
@@ -214,19 +260,19 @@ class Slider {
                 },
             }
         })
-        
+
         if (this.buttonPrevDesktop) {
             this.buttonPrevDesktop.addEventListener('click', (e) => {
                 currentSlider.slidePrev()
             })
         }
-        
+
         if (this.buttonNextDesktop) {
             this.buttonNextDesktop.addEventListener('click', (e) => {
                 currentSlider.slideNext()
             })
         }
-        
+
         function checkNavigation(swiper: Swiper) {
             if (swiper.slides.length <= swiper.params.slidesPerView) {
                 if (swiper.navigation.nextEl && swiper.navigation.prevEl) {

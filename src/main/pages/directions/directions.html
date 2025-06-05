@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg-4.jpg')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    Лучшие маршруты Екатеринбурга
+                </h1>
+                <p class="subtitle">
+                    Поможем спланировать путешествие в Екатеринбург — город на пересечении двух частей света, соединивший в себе Европу и Азию.
+                </p>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockPickYourRoute %>
+    <%= htmlWebpackPlugin.options.widgets.blockAttractionsDirections %>
+    <%= htmlWebpackPlugin.options.widgets.blockTopRoutes %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

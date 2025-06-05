@@ -114,6 +114,86 @@
     }
   }
 
+  &--direction {
+    background: none;
+    --padding: 20px 0 0;
+    border-radius: unset;
+
+    @include rmin($mobile) {
+      &:hover .picture-wrapper__more {
+        top: 80%;
+      }
+    }
+
+    .picture-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+
+      picture {
+        height: auto;
+        aspect-ratio: 328/377;
+
+        @include rmin($mobile) {
+          aspect-ratio: 370/301;
+        }
+      }
+
+      &__more {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 85%;
+        z-index: 2;
+        background-color: var(--current-color);
+        clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+
+        padding: 20px;
+
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 9px;
+        color: var(--white);
+        text-align: end;
+
+        transition: top 0.2s ease;
+
+        @include rmin($mobile) {
+          top: 101%;
+        }
+
+        svg {
+          width: 0.7em;
+          height: 0.7em;
+          transform: rotate(-90deg);
+        }
+
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 90%;
+        background-color: var(--current-color);
+        opacity: 0.5;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+        z-index: 1;
+
+        @include rmin($mobile) {
+          top: 87%;
+        }
+      }
+    }
+  }
+
   &--light {
     --bg: var(--white);
   }
@@ -142,6 +222,11 @@
     --current-color-rgb: var(--green-rgb);
   }
 
+  &--purple {
+    --current-color: var(--purple);
+    --current-color-rgb: var(--purple-rgb);
+  }
+
   &__place {
     display: flex;
     align-items: center;
@@ -150,7 +235,7 @@
     svg {
       width: 16px;
       height: 16px;
-      color: var(--red);
+      color: var(--current-color);
     }
 
     span {
