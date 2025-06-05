@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg-5.png')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    афиша актуальных событий екатеринбурга
+                </h1>
+                <p class="subtitle">
+                    Юбилейный год будет наполнен событиями. Все мероприятия 300-летия любимого города— в нашей Афише.
+                </p>
+                <a href="#" class="button">предложить событие</a>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockPosterFilter %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

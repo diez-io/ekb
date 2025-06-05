@@ -114,147 +114,159 @@
 </header>
 
 <main class="main">
-    <section class="section section--intro" style="--background: url('../assets/images/main-bg-3.jpg')">
+    <section class="section section--intro" style="--background: url('../assets/images/main-bg-5.png')">
         <div class="container">
             <div class="intro">
                 <h1 class="title title--light">
-                    Гостиницы города
+                    афиша актуальных событий екатеринбурга
                 </h1>
                 <p class="subtitle">
-                    В 2023 году Екатеринбург отпразднует свое 300-летие. Свою историю город отсчитывает с 18 ноября 1723
-                    года, когда были запущены цеха крупнейшего в России железоделательного Екатерининского завода.
+                    Юбилейный год будет наполнен событиями. Все мероприятия 300-летия любимого города— в нашей Афише.
                 </p>
+                <a href="#" class="button">предложить событие</a>
             </div>
         </div>
     </section>
-    <section class="section section--gradient pt-130 ptm-64 pb-125 pbm-30">
+    <section class="section section--gray pt-87 ptm-66 pb-94 pbm-120 blockPosterFilter">
     <div class="container">
-        <div class="header-block">
-            <h2 class="title">Где остановиться</h2>
+        <div class="grid mb-50">
+            <h2 class="title grid__item--5">Программа событий</h2>
+            <div class="grid__item--7 blockPosterFilter__btns">
+                <button class="button button--invert mob-hidden">
+                    <span>город проведения</span>
+                    <svg>
+                        <use xlink:href="./assets/sprite.svg#icon-location"></use>
+                    </svg>
+                </button>
+                <button class="button mob-hidden">
+                    <span>Выбрать месяц</span>
+                    <svg>
+                        <use xlink:href="./assets/sprite.svg#icon-date-2"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="tags tags--purple grid__item--12">
+                <a href="#" class="tag" target="_blank">Выставки</a>
+                <a href="#" class="tag" target="_blank">Спектакли</a>
+                <a href="#" class="tag active" target="_blank">Спорт</a>
+                <a href="#" class="tag" target="_blank">Фестивали</a>
+                <a href="#" class="tag" target="_blank">Экскурсии</a>
+                <a href="#" class="tag" target="_blank">Детям</a>
+            </div>
         </div>
-        <div class="hotels">
-            <div class="filter">
-                <a href="#" class="tag tag--filter active" target="_blank">
-                    <span>гостиницы 5</span>
-                    <svg>
-                        <use xlink:href="./assets/sprite.svg#icon-star"></use>
-                    </svg>
-                </a>
-                <a href="#" class="tag tag--filter active" target="_blank">
-                    <span>гостиницы 4</span>
-                    <svg>
-                        <use xlink:href="./assets/sprite.svg#icon-star"></use>
-                    </svg>
-                </a>
-                <a href="#" class="tag tag--filter active" target="_blank">
-                    <span>гостиницы 3</span>
-                    <svg>
-                        <use xlink:href="./assets/sprite.svg#icon-star"></use>
-                    </svg>
-                </a>
-                <a href="#" class="tag tag--filter" target="_blank">хостелы</a>
-                <a href="#" class="tag tag--filter" target="_blank">кемпинги</a>
-                <a href="#" class="tag tag--filter" target="_blank">глемпинги</a>
-            </div>
-            <div class="hotels__list">
-                <a href="#" class="article-news article-news--max-size article-news--attraction article-news--light">
-                    <span class="article-news__badges">
-                        <span class="badge">топ!</span>
-                    </span>
-                    <picture class="article-news__picture">
-                        <img src="./assets/images/hotel-1.png" alt="">
-                    </picture>
-                    <div class="article-news__info">
-                        <h2 class="article-news__title">
-                            Отель-гостиница Мегалайт
-                        </h2>
-                        <p class="article-news__place">
-                            <svg>
-                                <use xlink:href="./assets/sprite.svg#icon-location"></use>
-                            </svg>
-                            <span>г. Екатеринбург, пер. Мордвинский, пер.1</span>
-                        </p>
+        <div class="grid">
+            <a href="#" class="article-news grid__item--4 article-news--yellow">
+                <span class="article-news__badges"></span>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-10.jpg" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Концерт</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
                     </div>
-                </a>
-                <a href="#" class="article-news article-news--max-size article-news--attraction article-news--light">
-                    <span class="article-news__badges">
-                        <span class="badge">топ!</span>
-                    </span>
-                    <picture class="article-news__picture">
-                        <img src="./assets/images/hotel-2.jpg" alt="">
-                    </picture>
-                    <div class="article-news__info">
-                        <h2 class="article-news__title">
-                            Отель-гостиница Мегалайт
-                        </h2>
-                        <p class="article-news__place">
-                            <svg>
-                                <use xlink:href="./assets/sprite.svg#icon-location"></use>
-                            </svg>
-                            <span>г. Екатеринбург, пер. Мордвинский, пер.1</span>
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="article-news article-news--max-size article-news--attraction article-news--light">
-                    <span class="article-news__badges">
-                        <span class="badge">топ!</span>
-                    </span>
-                    <picture class="article-news__picture">
-                        <img src="./assets/images/hotel-3.png" alt="">
-                    </picture>
-                    <div class="article-news__info">
-                        <h2 class="article-news__title">
-                            Отель-гостиница Мегалайт
-                        </h2>
-                        <p class="article-news__place">
-                            <svg>
-                                <use xlink:href="./assets/sprite.svg#icon-location"></use>
-                            </svg>
-                            <span>г. Екатеринбург, пер. Мордвинский, пер.1</span>
-                        </p>
-                    </div>
-                </a>
-                <a href="#" class="article-news article-news--max-size article-news--attraction article-news--light">
-                    <span class="article-news__badges">
-                        <span class="badge">топ!</span>
-                    </span>
-                    <picture class="article-news__picture">
-                        <img src="./assets/images/hotel-4.png" alt="">
-                    </picture>
-                    <div class="article-news__info">
-                        <h2 class="article-news__title">
-                            Отель-гостиница Мегалайт
-                        </h2>
-                        <p class="article-news__place">
-                            <svg>
-                                <use xlink:href="./assets/sprite.svg#icon-location"></use>
-                            </svg>
-                            <span>г. Екатеринбург, пер. Мордвинский, пер.1</span>
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <button class="button button--down">
-                <span>Показать больше</span>
-                <span class="button__icon">
-                    <svg>
-                        <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
-                    </svg>
+                    <h2 class="article-news__title">
+                        Трибьют-концерт Свердловского рок-клуба
+                    </h2>
+                </div>
+            </a>
+            <a href="#" class="article-news grid__item--4 article-news--green">
+                <span class="article-news__badges">
+                    <span class="badge">топ!</span>
                 </span>
-            </button>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-11.png" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Фестиваль</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
+                    </div>
+                    <h2 class="article-news__title">
+                        Фестиваль уличных театров «Лица улиц»
+                    </h2>
+                </div>
+            </a>
+            <a href="#" class="article-news grid__item--4 article-news--yellow">
+                <span class="article-news__badges"></span>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-10.jpg" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Концерт</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
+                    </div>
+                    <h2 class="article-news__title">
+                        Трибьют-концерт Свердловского рок-клуба
+                    </h2>
+                </div>
+            </a>
+            <a href="#" class="article-news grid__item--4 article-news--green">
+                <span class="article-news__badges">
+                    <span class="badge">топ!</span>
+                </span>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-11.png" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Фестиваль</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
+                    </div>
+                    <h2 class="article-news__title">
+                        Фестиваль уличных театров «Лица улиц»
+                    </h2>
+                </div>
+            </a>
+            <a href="#" class="article-news grid__item--4 article-news--green">
+                <span class="article-news__badges">
+                    <span class="badge">топ!</span>
+                </span>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-12.png" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Фестиваль</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
+                    </div>
+                    <h2 class="article-news__title">
+                        Фестиваль уличных театров «Лица улиц»
+                    </h2>
+                </div>
+            </a>
+            <a href="#" class="article-news grid__item--4 article-news--green">
+                <span class="article-news__badges">
+                    <span class="badge">топ!</span>
+                </span>
+                <picture class="article-news__picture">
+                    <img src="./assets/images/pic-12.png" alt="">
+                </picture>
+                <div class="article-news__info">
+                    <div class="article-news__header">
+                        <p class="article-news__tag">Фестиваль</p>
+                        <time class="article-news__time" datetime="2025.02.12">12.02.2025</time>
+                    </div>
+                    <h2 class="article-news__title">
+                        Фестиваль уличных театров «Лица улиц»
+                    </h2>
+                </div>
+            </a>
         </div>
+        <button class="button button--down blockPosterFilter__more-btn">
+            <span>Показать больше достопремечательностей</span>
+            <span class="button__icon">
+                <svg>
+                    <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                </svg>
+            </span>
+        </button>
     </div>
-</section>
-
-    <section class="section section--logo-bg section--logo-bg-top pt-130 ptm-55 pb-130 pbm-80">
-    <div class="container">
-        <div class="header-block">
-            <h2 class="title">Карта гостиниц</h2>
-        </div>
-        <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=60.599925%2C56.828213&z=13.62" width="560" height="400"
-                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-        </div>
+    <div class="decor">
+        <img style="--top: 7%; --left: 0%;" src="./assets/images/decor/circle-3.svg" alt="">
+        <img style="--top: 94%; --left: 0%;" src="./assets/images/decor/line-1.svg" alt="">
+        <img style="--top: 86%; --left: 94.3%;" src="./assets/images/decor/circle-4.svg" alt="">
     </div>
 </section>
 

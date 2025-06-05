@@ -4,6 +4,14 @@
   flex-wrap: wrap;
   gap: 15px;
 
+  --text-color: var(--blue-rgb);
+  --bg-color: var(--white);
+
+  &--purple {
+    --text-color: var(--purple-rgb);
+    --bg-color: var(--white);
+  }
+
   @include r($mobile) {
     gap: 10px 4px;
   }
