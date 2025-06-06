@@ -1,0 +1,43 @@
+section:has(.blockTopRoutes--forSelf) {
+  background: linear-gradient(0deg, var(--grey-bg), var(--grey-bg)),
+linear-gradient(180deg, var(--grey-bg) 0%, var(--white) 100%);
+
+  z-index: 1;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: unset;
+    right: -350px;
+    top: 10%;
+    width: 490px;
+    height: 490px;
+    border-radius: 100%;
+    border: 100px solid var(--yellow-2);
+
+    @include r($mobile) {
+      width: 350px;
+      height: 350px;
+      border-width: 70px;
+      right: -230px;
+      top: unset;
+      bottom: 30%;
+    }
+  }
+}
+
+.blockTopRoutes--forSelf {
+  &__decor {
+    position: absolute;
+
+    bottom: -90%;
+    left: -30%;
+    z-index: -1;
+
+    width: auto;
+    height: 200%;
+    aspect-ratio: 1/1;
+    transform: rotate(-45deg);
+  }
+}

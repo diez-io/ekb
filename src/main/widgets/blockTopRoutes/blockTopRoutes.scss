@@ -2,8 +2,26 @@ section:has(.blockTopRoutes) {
   background-image: none;
   background-color: var(--white);
 
-  @include rmin($mobile + 1) {
-    z-index: 1;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -470px;
+    top: 10%;
+    width: 597px;
+    height: 597px;
+    border-radius: 100%;
+    border: 100px solid var(--blue);
+
+    @include r($mobile) {
+      width: 310px;
+      height: 310px;
+      border-width: 51px;
+      left: -230px;
+      top: unset;
+      bottom: -20px;
+    }
   }
 }
 
@@ -15,7 +33,6 @@ section:has(.blockTopRoutes) {
   @include rmin($mobile + 1) {
     gap: 60px;
     $offset: 20px;
-    z-index: 1;
 
     @for $i from 0 through 100 {
       $pos: $i * 3;
@@ -60,68 +77,72 @@ section:has(.blockTopRoutes) {
     }
   }
 
-  &__bg {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    z-index: 100;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      bottom: -10px;
-      right: 0;
-      width: 100vw;
-      background-color: var(--white);
-      z-index: 100;
-    }
-  }
-
   .slider {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 
     @include rmin($mobile) {
       display: grid;
-      grid-template-columns: 2fr 40px 3fr;
-      gap: 0;
+      grid-template-columns: auto 60%;
+      gap: 40px;
+      z-index: 50;
 
       .swiper {
-        grid-column: 3/4;
-        grid-row: 1/3;
-        z-index: 50;
+        width: 370px;
+        margin-left: unset;
+        margin-right: unset;
 
         &-slide {
           max-width: 370px;
         }
 
         &-control {
-          z-index: 100;
+          margin-top: 0;
+          grid-row: 2/3;
           align-items: flex-end;
+
+          .slider__btn--disabled {
+            opacity: 20%;
+          }
         }
+      }
+    }
+
+    .swiper {
+      &-control {
+        margin-top: 0;
+        top: unset;
+        bottom: 30%;
       }
     }
   }
 
-  .swiper {
-    &-control {
-      margin-top: 0;
-
-      .slider__btn--disabled {
-        opacity: 20%;
-      }
+  &__swiper-wrapper {
+    @include rmin($mobile) {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      width: 100vw;
+      overflow: hidden;
     }
   }
 
   &__decor {
     position: absolute;
-    bottom: 0;
-    right: 0%;
-    z-index: 50;
 
-    width: 90%;
-    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: auto;
+    height: 80%;
+    aspect-ratio: 2/1;
+
+    @include r($mobile) {
+      height: 50%;
+      top: 40px;
+      bottom: unset;
+    }
   }
 }
