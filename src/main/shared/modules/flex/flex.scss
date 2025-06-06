@@ -1,24 +1,92 @@
-.grid {
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+.flex {
+  display: flex;
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-col {
+    flex-direction: column;
+  }
 
   @include rmin($mobile + 1) {
     @for $i from 1 through 12 {
-      .grid__item--#{$i} {
-        grid-column: span $i;
+      .flex-#{$i} {
+        flex: $i;
       }
     }
   }
 
   @include r($mobile) {
-    grid-template-columns: repeat(4, 1fr);
+    &-mob-row {
+      flex-direction: row;
+    }
+
+    &-mob-col {
+      flex-direction: column;
+    }
 
     @for $i from 1 through 4 {
-      .grid__item-mob--#{$i} {
-        grid-column: span $i;
+      .flex-mob-#{$i} {
+        flex: $i;
       }
     }
   }
+}
+
+/* Flex container alignment utilities */
+.flex-ai-start { align-items: flex-start; }
+.flex-ai-center { align-items: center; }
+.flex-ai-end { align-items: flex-end; }
+.flex-ai-stretch { align-items: stretch; }
+.flex-ai-baseline { align-items: baseline; }
+
+.flex-jc-start { justify-content: flex-start; }
+.flex-jc-center { justify-content: center; }
+.flex-jc-end { justify-content: flex-end; }
+.flex-jc-between { justify-content: space-between; }
+.flex-jc-around { justify-content: space-around; }
+.flex-jc-evenly { justify-content: space-evenly; }
+
+/* Flex item alignment utilities */
+.flex-as-auto { align-self: auto; }
+.flex-as-start { align-self: flex-start; }
+.flex-as-center { align-self: center; }
+.flex-as-end { align-self: flex-end; }
+.flex-as-stretch { align-self: stretch; }
+.flex-as-baseline { align-self: baseline; }
+
+.flex-js-auto { justify-self: auto; }
+.flex-js-start { justify-self: start; }
+.flex-js-center { justify-self: center; }
+.flex-js-end { justify-self: end; }
+.flex-js-stretch { justify-self: stretch; }
+
+/* Mobile alignment utilities */
+@include r($mobile) {
+  .flex-mob-ai-start { align-items: flex-start; }
+  .flex-mob-ai-center { align-items: center; }
+  .flex-mob-ai-end { align-items: flex-end; }
+  .flex-mob-ai-stretch { align-items: stretch; }
+  .flex-mob-ai-baseline { align-items: baseline; }
+
+  .flex-mob-jc-start { justify-content: flex-start; }
+  .flex-mob-jc-center { justify-content: center; }
+  .flex-mob-jc-end { justify-content: flex-end; }
+  .flex-mob-jc-between { justify-content: space-between; }
+  .flex-mob-jc-around { justify-content: space-around; }
+  .flex-mob-jc-evenly { justify-content: space-evenly; }
+
+  .flex-mob-as-auto { align-self: auto; }
+  .flex-mob-as-start { align-self: flex-start; }
+  .flex-mob-as-center { align-self: center; }
+  .flex-mob-as-end { align-self: flex-end; }
+  .flex-mob-as-stretch { align-self: stretch; }
+  .flex-mob-as-baseline { align-self: baseline; }
+
+  .flex-mob-js-auto { justify-self: auto; }
+  .flex-mob-js-start { justify-self: start; }
+  .flex-mob-js-center { justify-self: center; }
+  .flex-mob-js-end { justify-self: end; }
+  .flex-mob-js-stretch { justify-self: stretch; }
 }

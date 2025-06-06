@@ -30,6 +30,7 @@ linear-gradient(180deg, var(--grey-bg) 0%, var(--white) 100%);
 .blockTopRoutes--forSelf {
   &__decor {
     position: absolute;
+    color: var(--white);
 
     bottom: -90%;
     left: -30%;

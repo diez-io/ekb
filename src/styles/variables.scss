@@ -14,8 +14,10 @@ $themes: (
                 "grey-dark": #505050,
                 "grey-dark-light": #797979,
                 "grey": #B6B6B6,
+                "grey-2": #626262,
                 "grey-light": #B3B5C3,
                 "grey-gradient": #E8F1F7,
+                "grey-gradient-2": #F9F9F9,
                 "grey-bg": #F4F8FB,
                 "main-bg": #FFFFFF,
                 "white": #FFFFFF,
@@ -42,8 +44,10 @@ $themes: (
                 "grey-dark": #505050,
                 "grey-dark-light": #797979,
                 "grey": #B6B6B6,
+                "grey-2": #626262,
                 "grey-light": #B3B5C3,
                 "grey-gradient": #212121,
+                "grey-gradient-2": #F9F9F9,
                 "grey-bg": #212121,
                 "main-bg": #1C1C1C,
                 "white": #FFFFFF,
@@ -253,5 +257,15 @@ $mob-min: 767;
 @for $i from 0 through 200 {
   .mbm-#{$i} {
     @include mbm($i);
+  }
+}
+
+@for $i from 0 through 100 {
+  .gap-r-#{$i} {
+    row-gap: #{$i}px !important;
+  }
+
+  .gap-c-#{$i} {
+    column-gap: #{$i}px !important;
   }
 }
