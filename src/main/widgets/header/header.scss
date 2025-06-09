@@ -45,3 +45,28 @@
     transition: .2s linear;
   }
 }
+
+body:has(#header-visibility-fix) {
+  .header {
+    --currentHeaderColor: var(--black);
+    background: var(--white);
+
+    .logo img {
+      &:first-child {
+        display: none !important;
+      }
+
+      &:last-child {
+        display: block !important;
+      }
+    }
+  }
+}
+
+#header-visibility-fix {
+  height: 60px;
+
+  @include rmin($mobile) {
+    height: 80px;
+  }
+}
