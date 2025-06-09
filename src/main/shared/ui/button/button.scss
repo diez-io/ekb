@@ -16,6 +16,11 @@
     background-color: var(--orange);
   }
 
+  &--invert {
+    background-color: var(--white);
+    color: var(--blue);
+  }
+
   &__icon {
     display: flex;
     align-items: center;

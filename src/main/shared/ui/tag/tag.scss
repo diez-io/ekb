@@ -10,25 +10,25 @@
   justify-content: center;
   padding: 10px 20px;
 
-  @include text(rgba(var(--blue-rgb), .8), 16px);
+  @include text(rgba(var(--text-color), .8), 16px);
 
-  background-color: var(--white);
+  background-color: var(--bg-color);
   border-radius: $r-30;
   cursor: pointer;
 
   @include r($mobile) {
-    border: 1px solid var(--blue-light);
-    @include text(rgba(var(--blue-rgb), .8), 13px);
+    border: 1px solid rgba(var(--text-color), 1);
+    @include text(rgba(var(--text-color), .8), 13px);
   };
 
   &--filter {
     padding: 10px 30px;
-    @include text(rgba(var(--blue-rgb), .8), 14px);
+    @include text(rgba(var(--text-color), .8), 14px);
   }
 
   &.active {
-    background: var(--blue);
-    color: var(--white);
+    background: rgba(var(--text-color), 1);
+    color: var(--bg-color);
   }
 
   svg {

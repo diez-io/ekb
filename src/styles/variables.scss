@@ -2,6 +2,7 @@
 
 // Шрифты
 $font-main: "Iset Sans", sans-serif;
+$font-amatic: "Amatic SC", sans-serif;
 
 $themes: (
         "light": (
@@ -13,8 +14,10 @@ $themes: (
                 "grey-dark": #505050,
                 "grey-dark-light": #797979,
                 "grey": #B6B6B6,
+                "grey-2": #626262,
                 "grey-light": #B3B5C3,
                 "grey-gradient": #E8F1F7,
+                "grey-gradient-2": #F9F9F9,
                 "grey-bg": #F4F8FB,
                 "main-bg": #FFFFFF,
                 "white": #FFFFFF,
@@ -22,6 +25,7 @@ $themes: (
                 "orange": #FD6524,
                 "orange-light": #F39314,
                 "yellow": #EFBE00,
+                "yellow-2": #F4CE43,
                 "yellow-light": #FED431,
                 "green": #1AB31E,
                 "green-accent": #00B400,
@@ -29,6 +33,7 @@ $themes: (
                 "blue": #1AA1E0,
                 "blue-light": #48B4E6,
                 "purple": #9F5AA7,
+                "purple-light": #CFC3DE,
         ),
         "black": (
                 "text-dark": #FFFFFF,
@@ -39,8 +44,10 @@ $themes: (
                 "grey-dark": #505050,
                 "grey-dark-light": #797979,
                 "grey": #B6B6B6,
+                "grey-2": #626262,
                 "grey-light": #B3B5C3,
                 "grey-gradient": #212121,
+                "grey-gradient-2": #F9F9F9,
                 "grey-bg": #212121,
                 "main-bg": #1C1C1C,
                 "white": #FFFFFF,
@@ -48,6 +55,7 @@ $themes: (
                 "orange": #FD6524,
                 "orange-light": #F39314,
                 "yellow": #EFBE00,
+                "yellow-2": #F4CE43,
                 "yellow-light": #FED431,
                 "green": #1AB31E,
                 "green-accent": #00B400,
@@ -55,6 +63,7 @@ $themes: (
                 "blue": #1AA1E0,
                 "blue-light": #48B4E6,
                 "purple": #9F5AA7,
+                "purple-light": #CFC3DE,
         )
 );
 
@@ -248,5 +257,15 @@ $mob-min: 767;
 @for $i from 0 through 200 {
   .mbm-#{$i} {
     @include mbm($i);
+  }
+}
+
+@for $i from 0 through 100 {
+  .gap-r-#{$i} {
+    row-gap: #{$i}px !important;
+  }
+
+  .gap-c-#{$i} {
+    column-gap: #{$i}px !important;
   }
 }
