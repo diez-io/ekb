@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/direction-bg.png')">
+        <div class="container">
+            <div class="intro">
+                <h1 class="title title--light">
+                    Экскурсионный маршрут на Уральские горы
+                </h1>
+                <p class="subtitle">
+                    Поможем спланировать путешествие в Екатеринбург — город на пересечении двух частей света,
+                    соединивший в себе Европу и Азию.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-115 ptm-60 pb-115 pbm-80">
+        <div class="container">
+            <div class="media-block">
+                <div class="media-block__item">
+                    <div class="media-block__info">
+                        <h2 class="media-block__title">Маршрут <span>по горам</span></h2>
+                        <p class="text">
+                            В 2022 году в муниципальном образовании «город Екатеринбург» в рамках подготовки к празднованию
+                            300-летия основания Екатеринбурга реализуется мероприятие «Благоустройство Исторического сквера»
+                            с привлечением средств областного бюджета в рамках предоставления иного межбюджетного
+                            трансферта.<br>
+                            <br>
+                            Сквер был возведен в 1973 году в честь 250-летия Екатеринбурга, но за это время некоторые
+                            элементы пришли в негодность и возникла потребность в проведении их обновления. Накануне
+                            300-летия города Администрация Екатеринбурга и правительство Свердловской области приняли
+                            решение о выделении средств на эти цели.
+                        </p>
+                    </div>
+                    <picture class="media-block__picture">
+                        <img src="./assets/images/media-1.png" alt="">
+                    </picture>
+                </div>
+                <div class="media-block__item">
+                    <div class="media-block__info">
+                        <h2 class="media-block__title">Маршрут <span>по горам</span></h2>
+                        <p class="text">
+                            В 2022 году в муниципальном образовании «город Екатеринбург» в рамках подготовки к празднованию
+                            300-летия основания Екатеринбурга реализуется мероприятие «Благоустройство Исторического сквера»
+                            с привлечением средств областного бюджета в рамках предоставления иного межбюджетного
+                            трансферта.<br>
+                            <br>
+                            Сквер был возведен в 1973 году в честь 250-летия Екатеринбурга, но за это время некоторые
+                            элементы пришли в негодность и возникла потребность в проведении их обновления. Накануне
+                            300-летия города Администрация Екатеринбурга и правительство Свердловской области приняли
+                            решение о выделении средств на эти цели.
+                        </p>
+                    </div>
+                    <picture class="media-block__picture">
+                        <img src="./assets/images/media-2.png" alt="">
+                    </picture>
+                </div>
+                <div class="media-block__item">
+                    <div class="media-block__info">
+                        <h2 class="media-block__title"><span>Общая галерея</span> маршрута</h2>
+                    </div>
+                    <%= htmlWebpackPlugin.options.widgets.blockGallery %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockPickYourRoute %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

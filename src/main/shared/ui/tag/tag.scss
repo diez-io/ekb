@@ -24,6 +24,10 @@
   &--filter {
     padding: 10px 30px;
     @include text(rgba(var(--text-color), .8), 14px);
+
+    @include r($mobile) {
+      padding: 10px 14px;
+    }
   }
 
   &.active {

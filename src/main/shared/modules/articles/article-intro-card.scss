@@ -19,6 +19,10 @@
     height: 377px;
   }
 
+  &--narrow {
+    max-width: 370px;
+  }
+
   &--red {
     --card-color: var(--red);
     --card-color-rgb: var(--red-rgb);

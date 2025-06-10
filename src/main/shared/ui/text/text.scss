@@ -1,6 +1,10 @@
 .text {
   @include text(var(--text-black), 16px, 300, none, 22px);
 
+  &--small {
+    @include text(var(--text-black), 14px, 400);
+  }
+
   &--gray {
     color: var(--grey-dark-light);
   }

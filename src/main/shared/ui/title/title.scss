@@ -18,6 +18,18 @@
     color: var(--white);
   }
 
+  &--green {
+    span {
+      color: var(--green);
+    }
+  }
+
+  &--orange {
+    span {
+      color: var(--orange);
+    }
+  }
+
   b {
     color: var(--orange);
   }

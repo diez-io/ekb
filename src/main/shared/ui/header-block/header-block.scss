@@ -5,6 +5,10 @@
   gap: 20px;
   margin-bottom: 50px;
 
+  &--offset {
+    margin-bottom: 120px;
+  }
+
   @include r($mobile) {
     flex-direction: column;
     align-items: flex-start;
@@ -13,10 +17,17 @@
 
   .text,
   .subtitle {
+    width: 100%;
     max-width: 670px;
   }
 
   .swiper-control {
     margin-top: 0;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }

@@ -1,0 +1,52 @@
+.media-block {
+  display: flex;
+  flex-direction: column;
+  gap: 115px;
+
+  @include r($mobile) {
+    gap: 35px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include r($mobile) {
+      gap: 32px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    @include text(var(--black), 50px, 500);
+
+    @include r($mobile) {
+      @include text(var(--black), 31px, 700);
+    }
+
+    span {
+      color: var(--green);
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 217px;
+    aspect-ratio: 16/6;
+    border-radius: $r-20;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+}

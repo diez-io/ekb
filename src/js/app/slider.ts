@@ -33,9 +33,9 @@ class Slider {
         this.desktopOnly = this.el.hasAttribute('data-desktop-only');
         this.mobileOnly = this.el.hasAttribute('data-mobile-only');
 
-        this.buttonPrevDesktop = this.el.parentElement.querySelector('.swiper-btn--prev');
-        this.buttonNextDesktop = this.el.parentElement.querySelector('.swiper-btn--next');
-
+        this.buttonPrevDesktop = this.el.parentElement.closest('.container').querySelector('.swiper-btn--prev');
+        this.buttonNextDesktop = this.el.parentElement.closest('.container').querySelector('.swiper-btn--next');
+        
         this.init();
     }
 

@@ -6,6 +6,7 @@ class Header {
     burger;
     isHovered;
     isMobileMenuOpen;
+    hasIntroBlock;
     scrollPositionInverted;
     
     constructor(header: Element) {
@@ -17,6 +18,7 @@ class Header {
         this.isHovered = false;
         this.isMobileMenuOpen = false;
         this.scrollPositionInverted = false;
+        this.hasIntroBlock = document.querySelector('.section--intro');
     
         this.init()
     }
@@ -67,7 +69,7 @@ class Header {
     }
     
     checkPosition = () => {
-        const shouldInvert = window.scrollY >= 200;
+        const shouldInvert = window.scrollY >= 200 || !this.hasIntroBlock;
         this.scrollPositionInverted = shouldInvert;
         
         if (shouldInvert) {

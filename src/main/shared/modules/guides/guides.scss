@@ -1,0 +1,11 @@
+.guides {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+
+  @include r($mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

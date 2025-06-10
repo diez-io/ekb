@@ -1,0 +1,19 @@
+.article-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 472px;
+    height: 315px;
+    border-radius: $r-20;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+}

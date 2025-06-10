@@ -52,6 +52,7 @@
   align-items: center;
   gap: 12px;
   margin-top: 29px;
+  pointer-events: none;
 
   &--end {
     justify-content: flex-end;
@@ -95,6 +96,7 @@
   background-color: var(--green);
   border-radius: 50%;
   box-shadow: -10px 20px 50px 0 #8F9AB50D;
+  pointer-events: auto;
 
   @include r($mobile) {
     width: 40px;

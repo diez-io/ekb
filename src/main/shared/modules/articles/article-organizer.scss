@@ -1,0 +1,44 @@
+.article-organizer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @include r($mobile) {
+    flex-direction: column;
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 200px;
+    height: 254px;
+    border-radius: $r-20;
+    overflow: hidden;
+
+    @include r($mobile) {
+      width: 100%;
+      height: 332px;
+    }
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__title {
+    @include text(var(--black), 20px);
+  }
+
+  &__text {
+    @include text(var(--black), 16px, 300, none, 22px);
+  }
+}

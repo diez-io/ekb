@@ -1,59 +1,59 @@
 .blockGuides {
-    background-image: none;
-    background-color: var(--white);
+  background-image: none;
+  background-color: var(--white);
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: -300px;
-        bottom: -250px;
-        width: 597px;
-        height: 597px;
-        border-radius: 100%;
-        border: 100px solid var(--yellow-2);
+  &::after {
+    content: '';
+    position: absolute;
+    left: -300px;
+    bottom: -250px;
+    width: 597px;
+    height: 597px;
+    border-radius: 100%;
+    border: 100px solid var(--yellow-2);
 
-        @include r($mobile) {
-            width: 350px;
-            height: 350px;
-            border-width: 70px;
-            right: -230px;
-            top: unset;
-            bottom: 30%;
-        }
+    @include r($mobile) {
+      width: 350px;
+      height: 350px;
+      border-width: 70px;
+      right: -230px;
+      top: unset;
+      bottom: 30%;
+    }
+  }
+
+  &__decor {
+    &__ekb {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 90%;
+      width: auto;
+      aspect-ratio: 940/804;
+
+      @include r($mobile) {
+        width: 80%;
+        height: auto;
+      }
     }
 
-    &__decor {
-        &__ekb {
-            position: absolute;
-            top: 0;
-            left: 0;
+    &__lines {
+      color: var(--grey-bg);
+      opacity: 0.3;
+      position: absolute;
+      top: -20%;
+      left: 30%;
 
-            height: 90%;
-            width: auto;
-            aspect-ratio: 940/804;
+      height: 200%;
+      width: auto;
+      aspect-ratio: 1/1;
+      transform: rotate(45deg);
 
-            @include r($mobile) {
-                width: 80%;
-                height: auto;
-            }
-        }
-
-        &__lines {
-            color: var(--grey-bg);
-            opacity: 0.3;
-            position: absolute;
-            top: -20%;
-            left: 30%;
-
-            height: 200%;
-            width: auto;
-            aspect-ratio: 1/1;
-            transform: rotate(45deg);
-
-            @include r($mobile) {
-                width: 80%;
-                height: auto;
-            }
-        }
+      @include r($mobile) {
+        width: 80%;
+        height: auto;
+      }
     }
+  }
 }

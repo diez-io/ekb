@@ -4,8 +4,106 @@
 
 <body class="theme-light">
 <%= htmlWebpackPlugin.options.widgets.header %>
-<div id="header-visibility-fix"></div>
-<main class="main">
+<main class="main main--offset">
+    <section class="section pt-70 ptm-50 pb-140 pbm-40">
+        <div class="container">
+            <div class="block-poster block-poster--green">
+                <div class="grid">
+                    <div class="grid__item grid__item--9 grid__item-mob--4">
+                        <div class="block-poster__intro">
+                            <div class="block-poster__top">
+                                <div class="block-poster__tag">Фестиваль</div>
+                                <time class="text text--small text--gray" datetime="2025.02.12">12.02.2025</time>
+                            </div>
+                            <h1 class="title title--small">Меланхолия. Пушкин в русской музыке</h1>
+                            <div class="block-poster__place">
+                                <svg>
+                                    <use xlink:href="./assets/sprite.svg#icon-location"></use>
+                                </svg>
+                                <span>г. Екатеринбург, ул Мира, 19</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="grid__item grid__item--9 grid__item-mob--4 order-mob-1">
+                        <div class="block-poster__content">
+                            <picture class="block-poster__picture">
+                                <img src="./assets/images/poster-1.png" alt="">
+                            </picture>
+                            <div class="block-poster__info" data-tabs>
+                                <div class="block-poster__header">
+                                    <button class="block-poster__head block-poster__head--orange active" data-tabs-head>
+                                        О событии
+                                    </button>
+                                    <button class="block-poster__head block-poster__head--green" data-tabs-head>
+                                        Организатор события
+                                    </button>
+                                </div>
+                                <div class="block-poster__detail">
+                                    <div class="block-poster__item active" data-tabs-item>
+                                        <div class="editor editor--text">
+                                            <p>
+                                                В 2022 году в муниципальном образовании «город Екатеринбург» в рамках
+                                                подготовки к празднованию 300-летия основания Екатеринбурга реализуется
+                                                мероприятие «Благоустройство Исторического сквера» с привлечением
+                                                средств
+                                                областного бюджета в рамках предоставления иного межбюджетного
+                                                трансферта.<br>
+                                                <br>
+                                                Сквер был возведен в 1973 году в честь 250-летия Екатеринбурга, но за
+                                                это
+                                                время некоторые элементы пришли в негодность и возникла потребность в
+                                                проведении их обновления. Накануне 300-летия города Администрация
+                                                Екатеринбурга и правительство Свердловской области приняли решение о
+                                                выделении средств на эти цели.
+                                            </p>
+                                        </div>
+                                        <div class="block-poster__footer">
+                                            <a class="button" href="#" target="_blank">купить билет</a>
+                                            <picture class="block-poster__img">
+                                                <img src="./assets/images/kassir.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="block-poster__item" data-tabs-item>
+                                        <article class="article-organizer">
+                                            <picture class="article-organizer__avatar">
+                                                <img src="./assets/images/user-avatar.jpg" alt="">
+                                            </picture>
+                                            <div class="article-organizer__info">
+                                                <h2 class="article-organizer__title">городская администрация г.
+                                                    Екатеринбург</h2>
+                                                <p class="article-organizer__text">
+                                                    В 2022 году в муниципальном образовании «город Екатеринбург» в
+                                                    рамках подготовки к празднованию 300-летия основания Екатеринбурга
+                                                    реализуется мероприятие «Благоустройство Исторического сквера» с
+                                                    привлечением средств областного бюджета в рамках предоставления
+                                                    иного межбюджетного трансферта.
+                                                </p>
+                                                <a class="button button--mob-wide" href="#" target="_blank">купить билет</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--3 grid__item-mob--4 order-mob-0">
+                        <aside class="sidebar">
+                            <p class="sidebar__head">время работы:</p>
+                            <p class="sidebar__text">
+                                Ср. - Чт. с 10:00 до 18:00<br>
+                                Пт. с 10:00 до 17:00<br>
+                                Сб - Вс: с 11:00-17:00<br>
+                                Пн, Вт -выходной
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <%= htmlWebpackPlugin.options.widgets.blockPoster2 %>
 </main>
 <%= htmlWebpackPlugin.options.widgets.footer %>

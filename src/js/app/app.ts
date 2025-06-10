@@ -3,6 +3,7 @@ import {Fancybox} from "@fancyapps/ui";
 import Mask from "./mask";
 import Header from "./header";
 import Faq from "./faq";
+import Tabs from "./tabs";
 
 class App {
     constructor() {
@@ -15,6 +16,7 @@ class App {
         this.createMask()
         this.createHeader()
         this.createFaqBlock()
+        this.createTabs()
     }
     
     createFaqBlock = () => {
@@ -24,6 +26,16 @@ class App {
         
         faqBlock.forEach(el => {
             new Faq(el);
+        })
+    }
+    
+    createTabs = () => {
+        const tabContainers = document.querySelectorAll('[data-tabs]');
+        
+        if (!tabContainers) return;
+        
+        tabContainers.forEach(tabContainer => {
+            new Tabs(tabContainer);
         })
     }
     

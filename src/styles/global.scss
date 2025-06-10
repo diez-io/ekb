@@ -37,6 +37,10 @@ body {
 .main {
   flex-grow: 1;
   overflow-x: clip;
+
+  &--offset {
+    padding-top: 100px;
+  }
 }
 
 svg {
