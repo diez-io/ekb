@@ -66,7 +66,124 @@
   }
 
   &--study {
-    background: linear-gradient(0, var(--grey-gradient) 0%, var(--grey-bg) 100%);
+    background-image: url("../assets/images/decor/lesson-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: url("../assets/images/decor/lesson-bg-mob.svg");
+    }
+  }
+
+  &--hotels {
+    background-image: url("../assets/images/decor/hotel-bg.svg");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background: none;
+    }
+  }
+
+  &--festival {
+    background-image: url("../assets/images/decor/festival-video-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: url("../assets/images/decor/festival-video-bg-mob.svg");
+    }
+  }
+
+  &--guides {
+    background-image: url("../assets/images/decor/guides-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: url("../assets/images/decor/guides-bg-mob.svg");
+    }
+  }
+
+  &--tourism {
+    background-image: url("../assets/images/decor/tourism-1-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
+  &--routes {
+    background-image: url("../assets/images/decor/directions-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: url("../assets/images/decor/directions-bg-mob.svg");
+    }
+  }
+
+  &--pick-route {
+    background-image: url("../assets/images/decor/bg-3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
+  &--attraction {
+    background-image: url("../assets/images/decor/bg-1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
+  &--eat {
+    background-image: url("../assets/images/decor/bg-4.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
+  &--where-stop {
+    background-image: url("../assets/images/decor/bg-2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: none;
+    }
+  }
+
+  &--routes-self {
+    background-image: url("../assets/images/decor/directions-self-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include r($mobile) {
+      background-image: url("../assets/images/decor/directions-self-bg-mob.svg");
+    }
   }
 
   &--promo {

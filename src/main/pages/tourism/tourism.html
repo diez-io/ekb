@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/tourism.jpg')">
+        <div class="container">
+            <div class="intro">
+                <div class="breadcrumbs breadcrumbs--intro">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <p class="breadcrumbs__link">Виды туризма</p>
+                </div>
+                <h1 class="title title--light">
+                    виды туризма
+                </h1>
+                <p class="subtitle">
+                    В 2023 году Екатеринбург отпразднует свое 300-летие. Свою историю город отсчитывает с 18 ноября 1723
+                    года, когда были запущены цеха крупнейшего в России железоделательного Екатерининского завода.
+                </p>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.blockCards %>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.rating {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    @include text(var(--green), 14px, 300px, none)
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+
+    &.active {
+      color: var(--yellow-light);
+    }
+  }
+}

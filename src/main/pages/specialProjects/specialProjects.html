@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+
+<body class="theme-light">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section section--intro" style="--background: url('../assets/images/special-projects.png')">
+        <div class="container">
+            <div class="intro">
+                <div class="breadcrumbs breadcrumbs--intro">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <p class="breadcrumbs__link">Спецпроекты</p>
+                </div>
+                <h1 class="title title--light">
+                    Спецпроекты
+                </h1>
+                <p class="subtitle">
+                    В 2023 году Екатеринбург отпразднует свое 300-летие. Свою историю город отсчитывает с 18 ноября 1723
+                    года, когда были запущены цеха крупнейшего в России железоделательного Екатерининского завода.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section section--logo-bg section--logo-bg-center pt-130 ptm-30 pb-145 pbm-65">
+        <div class="container">
+            <div class="header-block">
+                <h2 class="title">Спецпроекты 2025</h2>
+            </div>
+            <div class="grid">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
+                    <a href="#" class="article-history">
+                        <picture class="article-history__picture">
+                            <img src="./assets/images/history-2.png" alt="">
+                        </picture>
+                        <div class="article-history__info">
+                            <h3 class="article-history__title">
+                                300 историй Екатеринбурга, изменившие мир
+                            </h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid__item grid__item--4 grid__item-mob--4">
+                    <a href="#" class="article-history">
+                        <picture class="article-history__picture">
+                            <img src="./assets/images/history-3.png" alt="">
+                        </picture>
+                        <div class="article-history__info">
+                            <h3 class="article-history__title">Мини-игры</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+<%= htmlWebpackPlugin.options.widgets.hidden %>
+<%= htmlWebpackPlugin.options.widgets.temp %>
+</body>
+</html>

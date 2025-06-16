@@ -1,0 +1,105 @@
+.article-guests {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: $r-20;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 133px;
+    background-color: rgba(var(--orange-rgb), .7);
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 40px, 0% 100%);
+
+    @include r($mobile) {
+      height: 61px;
+      clip-path: polygon(0 0, 100% 0, 100% 20px, 0% 100%);
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+
+    img {
+      @include coverFull();
+    }
+
+    @include r($mobile) {
+      height: 188px;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 26px 20px;
+    height: 133px;
+    z-index: 1;
+
+    @include r($mobile) {
+      padding: 10px 13px;
+      height: 61px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      width: 100%;
+      height: 110px;
+      background-color: rgba(var(--green-rgb), .8);
+      z-index: 1;
+      clip-path: polygon(0 0, 100% 0, 100% 40px, 0% 100%);
+
+      @include r($mobile) {
+        height: 47px;
+        clip-path: polygon(0 0, 100% 0, 100% 20px, 0% 100%);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      width: 100%;
+      height: 93px;
+      background-color: rgba(var(--yellow-light-rgb), .7);
+      z-index: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 40px);
+
+      @include r($mobile) {
+        height: 42px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 20px);
+      }
+    }
+  }
+
+  &__title {
+    @include text(var(--white), 26px, 400, none);
+    z-index: 1;
+
+    @include r($mobile) {
+      @include text(var(--white), 18px, 400, none);
+    }
+  }
+}

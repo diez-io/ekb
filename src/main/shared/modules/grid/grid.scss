@@ -3,6 +3,7 @@
   grid-auto-flow: dense;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
+  width: 100%;
 
   @include rmin($mobile + 1) {
     @for $i from 1 through 12 {

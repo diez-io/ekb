@@ -1,0 +1,11 @@
+.meta-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  gap: 5px;
+
+  &__text {
+    @include text(var(--black), 14px, 300px, none)
+  }
+}

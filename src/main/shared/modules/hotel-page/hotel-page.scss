@@ -1,0 +1,197 @@
+.hotel-page {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  @include r($mobile) {
+    gap: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include r($mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+
+    @include r($mobile) {
+      align-items: flex-start;
+    }
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    svg {
+      color: var(--purple-dark);
+    }
+  }
+
+  &__link {
+    display: flex;
+    @include text(var(--blue), 16px, 300, none, 22px);
+
+    @include r($mobile) {
+      @include text(var(--blue), 10px, 400, none);
+    }
+  }
+
+  &__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 19px;
+    background-color: var(--blue);
+    border-radius: $r-30;
+
+    img {
+      display: flex;
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      @include text(var(--white))
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  &__pictures {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 11px;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    grid-column: span 3;
+    border-radius: $r-20;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--main {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+
+    @include r($mobile) {
+      max-height: 220px;
+    }
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: 1fr 370px;
+    align-items: start;
+    gap: 30px;
+
+    @include r($mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+
+  &__editor {
+    display: flex;
+    padding: 20px 22px;
+    background-color: var(--grey-gradient);
+    border-radius: $r-20;
+
+    @include r($mobile) {
+      margin: 0 -20px;
+      border-radius: 0;
+    }
+  }
+
+  &__tag {
+    --tag-color: var(--black);
+    --tag-color-rgb: var(--black-rgb);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 23px;
+    @include text(var(--tag-color));
+    background: rgba(var(--tag-color-rgb), .1);
+    border-radius: 100px;
+
+    &--green {
+      --tag-color: var(--green);
+      --tag-color-rgb: var(--green-rgb);
+    }
+
+    &--blue {
+      --tag-color: var(--blue);
+      --tag-color-rgb: var(--blue-rgb);
+    }
+
+    &--yellow {
+      --tag-color: var(--yellow-light);
+      --tag-color-rgb: var(--yellow-light-rgb);
+    }
+
+    &--purple {
+      --tag-color: var(--purple);
+      --tag-color-rgb: var(--purple-rgb);
+    }
+
+    &--red {
+      --tag-color: var(--red);
+      --tag-color-rgb: var(--red-rgb);
+    }
+  }
+}

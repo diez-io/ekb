@@ -37,10 +37,10 @@
   }
 
   &__title {
-    align-self: flex-end;
     font-weight: 500;
     font-size: 36px;
     line-height: 100%;
+    text-align: left;
     text-transform: uppercase;
     color: var(--black);
   }
@@ -72,5 +72,10 @@
       height: 7px;
       color: var(--dark);
     }
+  }
+
+  &__button {
+    justify-self: flex-start;
+    margin-top: 18px;
   }
 }

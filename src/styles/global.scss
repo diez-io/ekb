@@ -31,6 +31,10 @@ body {
     position: absolute;
     top: var(--top);
     left: var(--left);
+
+    @include r($mobile) {
+      display: none;
+    }
   }
 }
 
@@ -98,6 +102,10 @@ svg {
 .text-visible {
   -webkit-line-clamp: none;
   line-clamp: none;
+}
+
+.center {
+  justify-self: center;
 }
 
 .centered {
